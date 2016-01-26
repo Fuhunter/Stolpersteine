@@ -15,3 +15,5 @@ struct ConstantsColors {
 struct ConstantsSeques {
     
 }
+
+let testLink: String = "http://vesternesse.hucompute.org:8990/persons"

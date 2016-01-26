@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class MainViewController: UIViewController {
     
@@ -28,6 +31,21 @@ class MainViewController: UIViewController {
             self.menuButton.target = self.revealViewController()
             self.menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        Alamofire.request(.GET, testLink, parameters: nil, encoding: .JSON, headers: nil).response { (request, response, data, error) -> Void in
+            guard let rdata = data else {
+                return
+            }
+			
+            let jsonStringOptional = NSString(data: rdata, encoding: NSISO2022JPStringEncoding)
+            
+            guard let jsonString = jsonStringOptional else {
+                return
+            }
+			
+            
+            let persons = JSON.parse(jsonString as String)
         }
     }
     
