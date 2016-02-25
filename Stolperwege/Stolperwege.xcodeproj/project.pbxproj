@@ -25,6 +25,9 @@
 		1BE4DC221C7F23EC00385026 /* Memorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC1D1C7F23EC00385026 /* Memorial.swift */; };
 		1BE4DC231C7F23EC00385026 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC1E1C7F23EC00385026 /* Person.swift */; };
 		1BE4DC241C7F23EC00385026 /* Stolperstein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC1F1C7F23EC00385026 /* Stolperstein.swift */; };
+		1BE4DC271C7F2D7200385026 /* PersonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC261C7F2D7200385026 /* PersonsTableViewCell.swift */; };
+		1BE4DC291C7F2DFB00385026 /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC281C7F2DFB00385026 /* PersonsTableViewController.swift */; };
+		1BE4DC2B1C7F2E8200385026 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC2A1C7F2E8200385026 /* ExampleData.swift */; };
 		4D78E8191BFCA8EF0071E131 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */; };
 		A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */; };
 		A5DB2C9A1BFD096D0043C305 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB2C991BFD096D0043C305 /* SWRevealViewController.m */; };
@@ -76,6 +79,9 @@
 		1BE4DC1D1C7F23EC00385026 /* Memorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memorial.swift; sourceTree = "<group>"; };
 		1BE4DC1E1C7F23EC00385026 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		1BE4DC1F1C7F23EC00385026 /* Stolperstein.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stolperstein.swift; sourceTree = "<group>"; };
+		1BE4DC261C7F2D7200385026 /* PersonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTableViewCell.swift; sourceTree = "<group>"; };
+		1BE4DC281C7F2DFB00385026 /* PersonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
+		1BE4DC2A1C7F2E8200385026 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
 		4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		7F7A939DCC0C2AD30B22E930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				1B2D686B1BFE2A4000929395 /* DesignMethods.swift */,
+				1BE4DC261C7F2D7200385026 /* PersonsTableViewCell.swift */,
+				1BE4DC281C7F2DFB00385026 /* PersonsTableViewController.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 				1B7203A51BFA76A4004CB4F0 /* LaunchScreen.storyboard */,
 				1B7203A81BFA76A4004CB4F0 /* Info.plist */,
 				A5DB2CA01BFD39440043C305 /* Supporting Files */,
+				1BE4DC2A1C7F2E8200385026 /* ExampleData.swift */,
 			);
 			path = Stolperwege;
 			sourceTree = "<group>";
@@ -435,6 +444,8 @@
 				1B2D686C1BFE2A4000929395 /* DesignMethods.swift in Sources */,
 				1B7FFB521BFE1BAE00DE9F99 /* BuildingsViewController.swift in Sources */,
 				1B7FFB561BFE24B500DE9F99 /* Constants.swift in Sources */,
+				1BE4DC291C7F2DFB00385026 /* PersonsTableViewController.swift in Sources */,
+				1BE4DC2B1C7F2E8200385026 /* ExampleData.swift in Sources */,
 				1B72039F1BFA76A4004CB4F0 /* MainViewController.swift in Sources */,
 				A5DB2C9D1BFD37490043C305 /* MapViewController.swift in Sources */,
 				1B7FFB541BFE1BFD00DE9F99 /* TimeLineViewController.swift in Sources */,
@@ -442,6 +453,7 @@
 				A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */,
 				1BE4DC221C7F23EC00385026 /* Memorial.swift in Sources */,
 				1B7FFB4D1BFE154D00DE9F99 /* HistoricalMapViewController.swift in Sources */,
+				1BE4DC271C7F2D7200385026 /* PersonsTableViewCell.swift in Sources */,
 				A5DB2C9A1BFD096D0043C305 /* SWRevealViewController.m in Sources */,
 				4D78E8191BFCA8EF0071E131 /* ContainerViewController.swift in Sources */,
 				1B72039D1BFA76A4004CB4F0 /* AppDelegate.swift in Sources */,

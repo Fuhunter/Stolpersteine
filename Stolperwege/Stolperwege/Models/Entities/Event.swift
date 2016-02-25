@@ -19,13 +19,15 @@ enum EventType {
 
 class Event {
     
+    var type: EventType
     var startDate: NSDate
     var duration: Int // OWL model is not clear, Int for now
     var description: String
     var location: Location
     
-    init (startDate: NSDate, duration: Int, description: String, location: Location){
+    init (type: EventType,startDate: NSDate, duration: Int, description: String, location: Location){
         
+        self.type = type
         self.startDate = startDate
         self.duration = duration
         self.description = description
