@@ -26,11 +26,11 @@ class ExampleData {
     }
     
     class var locationsOne: [Location]{
-        let locations : [LocationDataStore] = [("Geburtsort",coordinatesOne[0],LocationType.A, nil,nil,nil,"Opole",nil),
-                                                ("Studium",coordinatesOne[1],LocationType.A, nil,nil,nil,"Leipzig",nil),
-                                                ("Tod",coordinatesOne[2],LocationType.A, nil,nil,nil,"Theresienstadt",nil)
+        let locations : [LocationDataStore] = [("Geburtsort",coordinatesOne[0],LocationType.A, "Teststraße",0,12345,"Opole",nil),
+                                                ("Studium",coordinatesOne[1],LocationType.A, "Teststraße",0,12345,"Leipzig",nil),
+                                                ("Tod",coordinatesOne[2],LocationType.A, "Teststraße",0,12345,"Theresienstadt",nil)
                                                 ]
-        return locations.map({Location(name: $0.name, coordinate: $0.coordinate, street: $0.street, type: $0.type, houseNo: $0.houseNo, postCode: $0.postCode, city: $0.city, images: $0.images)})
+        return locations.map({Location(name: $0.name, coordinate: $0.coordinate, type: $0.type, street: $0.street, houseNo: $0.houseNo, postCode: $0.postCode, city: $0.city, images: $0.images)})
     }
     
     class var eventsOne: [Event]{
@@ -43,7 +43,7 @@ class ExampleData {
     
     class var persons: [Person]
     {
-        let dataArray : [PersonDataStore] = [("Friedrich", nil , "Münzer", nil, "male", NSDate(), [], "placeholder", Stolperstein(coordinate: CLLocationCoordinate2DMake(50.11092209999999, 8.682126700000026)))]
+        let dataArray : [PersonDataStore] = [("Friedrich", "Test" , "Münzer", nil, "male", NSDate(), [], "friedrich.jpg", Stolperstein(coordinate: CLLocationCoordinate2DMake(50.11092209999999, 8.682126700000026), city: "Frankfurt"))]
         
         return dataArray.map({Person(name: $0.name, title: $0.title, familyName: $0.familyName, familyMaidenName: $0.familyMaidenName, sex: $0.sex, birthDate: $0.birthDate, events: $0.events, image: UIImage(named: $0.imageName)!, stolperStein: $0.stolperStein)})
     }

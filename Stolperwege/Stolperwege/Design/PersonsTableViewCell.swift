@@ -10,6 +10,12 @@ import UIKit
 
 class PersonsTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet var personImage: UIImageView!
+    @IBOutlet var personName: UILabel!
+    @IBOutlet var personStolperSteinLocation: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

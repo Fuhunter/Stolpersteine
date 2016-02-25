@@ -18,14 +18,6 @@ class MapViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        let nav = self.navigationController?.navigationBar
-        nav?.barStyle = UIBarStyle.Black
-        nav?.tintColor = UIColor.whiteColor()
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

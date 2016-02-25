@@ -21,12 +21,12 @@ class Person {
     var image: UIImage
     var stolperStein: Stolperstein
     
-    init (name: String, title: String?=nil, familyName: String, familyMaidenName: String?=nil, sex: String, birthDate: NSDate, events: [Event], image: UIImage, stolperStein: Stolperstein){
+    init (name: String, title: String?="", familyName: String, familyMaidenName: String?="", sex: String, birthDate: NSDate, events: [Event], image: UIImage, stolperStein: Stolperstein){
         
         self.name = name
-        self.title = title!
+        self.title = title ?? ""
         self.familyName = familyName
-        self.familyMaidenName = familyMaidenName!
+        self.familyMaidenName = familyMaidenName ?? ""
         self.sex = sex
         self.birthDate = birthDate
         self.events = events

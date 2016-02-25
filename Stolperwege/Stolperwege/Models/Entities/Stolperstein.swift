@@ -21,11 +21,12 @@ Used for the stones "Stolpersteine", the historical devotments to persons from W
 class Stolperstein {
     
     var coordinate: CLLocationCoordinate2D
+    var city: String
     
-    init(coordinate: CLLocationCoordinate2D){
+    init(coordinate: CLLocationCoordinate2D, city: String){
         
         self.coordinate = coordinate
-        
+        self.city = city
         
     }
     

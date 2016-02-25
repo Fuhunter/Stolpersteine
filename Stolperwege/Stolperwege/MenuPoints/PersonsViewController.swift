@@ -18,13 +18,7 @@ class PersonsViewController: UIViewController, UITableViewDelegate, UITableViewD
 	
 	var persons: JSON = nil
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        let nav = self.navigationController?.navigationBar
-        nav?.barStyle = UIBarStyle.Black
-        nav?.tintColor = UIColor.whiteColor()
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-    }
+
     
     
     override func viewDidLoad() {

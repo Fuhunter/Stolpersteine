@@ -29,6 +29,8 @@
 		1BE4DC291C7F2DFB00385026 /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC281C7F2DFB00385026 /* PersonsTableViewController.swift */; };
 		1BE4DC2B1C7F2E8200385026 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC2A1C7F2E8200385026 /* ExampleData.swift */; };
 		1BE4DC2E1C7F4A7400385026 /* Persons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE4DC2D1C7F4A7400385026 /* Persons.storyboard */; };
+		1BE4DC351C7F545300385026 /* Persons2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC341C7F545300385026 /* Persons2ViewController.swift */; };
+		1BE4DC371C7F606C00385026 /* friedrich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BE4DC361C7F606C00385026 /* friedrich.jpg */; };
 		4D78E8191BFCA8EF0071E131 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */; };
 		A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */; };
 		A5DB2C9A1BFD096D0043C305 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB2C991BFD096D0043C305 /* SWRevealViewController.m */; };
@@ -84,6 +86,8 @@
 		1BE4DC281C7F2DFB00385026 /* PersonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
 		1BE4DC2A1C7F2E8200385026 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
 		1BE4DC2D1C7F4A7400385026 /* Persons.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Persons.storyboard; sourceTree = "<group>"; };
+		1BE4DC341C7F545300385026 /* Persons2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persons2ViewController.swift; sourceTree = "<group>"; };
+		1BE4DC361C7F606C00385026 /* friedrich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = friedrich.jpg; sourceTree = "<group>"; };
 		4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		7F7A939DCC0C2AD30B22E930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		1B72039B1BFA76A4004CB4F0 /* Stolperwege */ = {
 			isa = PBXGroup;
 			children = (
+				1BE4DC331C7F517A00385026 /* ExamplePictures */,
 				1BE4DC2C1C7F4A5C00385026 /* View */,
 				1B2D686A1BFE29F700929395 /* Design */,
 				A58D14C91BFA98B400B3251A /* Models */,
@@ -194,6 +199,7 @@
 			children = (
 				A5DB2C9C1BFD37490043C305 /* MapViewController.swift */,
 				1B72039E1BFA76A4004CB4F0 /* PersonsViewController.swift */,
+				1BE4DC341C7F545300385026 /* Persons2ViewController.swift */,
 				1B7FFB4C1BFE154D00DE9F99 /* HistoricalMapViewController.swift */,
 				1B7FFB511BFE1BAE00DE9F99 /* BuildingsViewController.swift */,
 				1B7FFB531BFE1BFD00DE9F99 /* TimeLineViewController.swift */,
@@ -242,6 +248,14 @@
 			children = (
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		1BE4DC331C7F517A00385026 /* ExamplePictures */ = {
+			isa = PBXGroup;
+			children = (
+				1BE4DC361C7F606C00385026 /* friedrich.jpg */,
+			);
+			name = ExamplePictures;
 			sourceTree = "<group>";
 		};
 		1E45DD2862962794795F9A31 /* Frameworks */ = {
@@ -404,6 +418,7 @@
 				1B7203A71BFA76A4004CB4F0 /* LaunchScreen.storyboard in Resources */,
 				1B7203A41BFA76A4004CB4F0 /* Assets.xcassets in Resources */,
 				1B7203A21BFA76A4004CB4F0 /* Main.storyboard in Resources */,
+				1BE4DC371C7F606C00385026 /* friedrich.jpg in Resources */,
 				1BE4DC2E1C7F4A7400385026 /* Persons.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +498,7 @@
 				1BE4DC291C7F2DFB00385026 /* PersonsTableViewController.swift in Sources */,
 				1BE4DC2B1C7F2E8200385026 /* ExampleData.swift in Sources */,
 				1B72039F1BFA76A4004CB4F0 /* PersonsViewController.swift in Sources */,
+				1BE4DC351C7F545300385026 /* Persons2ViewController.swift in Sources */,
 				A5DB2C9D1BFD37490043C305 /* MapViewController.swift in Sources */,
 				1B7FFB541BFE1BFD00DE9F99 /* TimeLineViewController.swift in Sources */,
 				1BE4DC211C7F23EC00385026 /* Location.swift in Sources */,

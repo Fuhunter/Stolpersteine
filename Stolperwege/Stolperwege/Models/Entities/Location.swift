@@ -39,16 +39,16 @@ class Location {
     var city: String
     var images: [UIImage]
     
-    init(name: String, coordinate: CLLocationCoordinate2D, street: String?=nil, type: LocationType, houseNo: Int?=nil, postCode: Int?=nil, city: String, images: [UIImage]?=nil){
+    init(name: String, coordinate: CLLocationCoordinate2D, type: LocationType,street: String?="",  houseNo: Int?=0, postCode: Int?=0, city: String, images: [UIImage]?=nil){
         
         self.name = name
         self.coordinate = coordinate
         self.type = type
-        self.street = street!
-        self.houseNo = houseNo!
-        self.postCode = postCode!
+        self.street = street ?? ""
+        self.houseNo = houseNo ?? 0
+        self.postCode = postCode ?? 0
         self.city = city
-        self.images = images!
+        self.images = images ?? [UIImage()]
     }
     
     
