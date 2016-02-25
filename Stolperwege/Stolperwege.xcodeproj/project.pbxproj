@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B2D686C1BFE2A4000929395 /* DesignMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D686B1BFE2A4000929395 /* DesignMethods.swift */; };
 		1B72039D1BFA76A4004CB4F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72039C1BFA76A4004CB4F0 /* AppDelegate.swift */; };
-		1B72039F1BFA76A4004CB4F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72039E1BFA76A4004CB4F0 /* MainViewController.swift */; };
+		1B72039F1BFA76A4004CB4F0 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72039E1BFA76A4004CB4F0 /* PersonsViewController.swift */; };
 		1B7203A21BFA76A4004CB4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7203A01BFA76A4004CB4F0 /* Main.storyboard */; };
 		1B7203A41BFA76A4004CB4F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7203A31BFA76A4004CB4F0 /* Assets.xcassets */; };
 		1B7203A71BFA76A4004CB4F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7203A51BFA76A4004CB4F0 /* LaunchScreen.storyboard */; };
@@ -28,6 +28,7 @@
 		1BE4DC271C7F2D7200385026 /* PersonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC261C7F2D7200385026 /* PersonsTableViewCell.swift */; };
 		1BE4DC291C7F2DFB00385026 /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC281C7F2DFB00385026 /* PersonsTableViewController.swift */; };
 		1BE4DC2B1C7F2E8200385026 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC2A1C7F2E8200385026 /* ExampleData.swift */; };
+		1BE4DC2E1C7F4A7400385026 /* Persons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE4DC2D1C7F4A7400385026 /* Persons.storyboard */; };
 		4D78E8191BFCA8EF0071E131 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */; };
 		A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */; };
 		A5DB2C9A1BFD096D0043C305 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB2C991BFD096D0043C305 /* SWRevealViewController.m */; };
@@ -58,7 +59,7 @@
 		1B2D686B1BFE2A4000929395 /* DesignMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignMethods.swift; sourceTree = "<group>"; };
 		1B7203991BFA76A4004CB4F0 /* Stolperwege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stolperwege.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B72039C1BFA76A4004CB4F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B72039E1BFA76A4004CB4F0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1B72039E1BFA76A4004CB4F0 /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
 		1B7203A11BFA76A4004CB4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B7203A31BFA76A4004CB4F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B7203A61BFA76A4004CB4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		1BE4DC261C7F2D7200385026 /* PersonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTableViewCell.swift; sourceTree = "<group>"; };
 		1BE4DC281C7F2DFB00385026 /* PersonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
 		1BE4DC2A1C7F2E8200385026 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
+		1BE4DC2D1C7F4A7400385026 /* Persons.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Persons.storyboard; sourceTree = "<group>"; };
 		4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		7F7A939DCC0C2AD30B22E930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -155,11 +157,11 @@
 		1B72039B1BFA76A4004CB4F0 /* Stolperwege */ = {
 			isa = PBXGroup;
 			children = (
+				1BE4DC2C1C7F4A5C00385026 /* View */,
 				1B2D686A1BFE29F700929395 /* Design */,
 				A58D14C91BFA98B400B3251A /* Models */,
 				A58D14C61BFA972100B3251A /* ViewController */,
 				1B72039C1BFA76A4004CB4F0 /* AppDelegate.swift */,
-				1B7203A01BFA76A4004CB4F0 /* Main.storyboard */,
 				1B7203A31BFA76A4004CB4F0 /* Assets.xcassets */,
 				1B7203A51BFA76A4004CB4F0 /* LaunchScreen.storyboard */,
 				1B7203A81BFA76A4004CB4F0 /* Info.plist */,
@@ -191,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				A5DB2C9C1BFD37490043C305 /* MapViewController.swift */,
-				1B72039E1BFA76A4004CB4F0 /* MainViewController.swift */,
+				1B72039E1BFA76A4004CB4F0 /* PersonsViewController.swift */,
 				1B7FFB4C1BFE154D00DE9F99 /* HistoricalMapViewController.swift */,
 				1B7FFB511BFE1BAE00DE9F99 /* BuildingsViewController.swift */,
 				1B7FFB531BFE1BFD00DE9F99 /* TimeLineViewController.swift */,
@@ -210,6 +212,36 @@
 				1BE4DC1F1C7F23EC00385026 /* Stolperstein.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		1BE4DC2C1C7F4A5C00385026 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B7203A01BFA76A4004CB4F0 /* Main.storyboard */,
+				1BE4DC2D1C7F4A7400385026 /* Persons.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1BE4DC2F1C7F4B0D00385026 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		1BE4DC301C7F4B1400385026 /* Persons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Persons;
+			sourceTree = "<group>";
+		};
+		1BE4DC311C7F4B2200385026 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		1E45DD2862962794795F9A31 /* Frameworks */ = {
@@ -233,6 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				1B7FFB4E1BFE1B1500DE9F99 /* MenuPoints */,
+				1BE4DC2F1C7F4B0D00385026 /* Map */,
+				1BE4DC301C7F4B1400385026 /* Persons */,
+				1BE4DC311C7F4B2200385026 /* Settings */,
 				A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */,
 				4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */,
 			);
@@ -369,6 +404,7 @@
 				1B7203A71BFA76A4004CB4F0 /* LaunchScreen.storyboard in Resources */,
 				1B7203A41BFA76A4004CB4F0 /* Assets.xcassets in Resources */,
 				1B7203A21BFA76A4004CB4F0 /* Main.storyboard in Resources */,
+				1BE4DC2E1C7F4A7400385026 /* Persons.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +482,7 @@
 				1B7FFB561BFE24B500DE9F99 /* Constants.swift in Sources */,
 				1BE4DC291C7F2DFB00385026 /* PersonsTableViewController.swift in Sources */,
 				1BE4DC2B1C7F2E8200385026 /* ExampleData.swift in Sources */,
-				1B72039F1BFA76A4004CB4F0 /* MainViewController.swift in Sources */,
+				1B72039F1BFA76A4004CB4F0 /* PersonsViewController.swift in Sources */,
 				A5DB2C9D1BFD37490043C305 /* MapViewController.swift in Sources */,
 				1B7FFB541BFE1BFD00DE9F99 /* TimeLineViewController.swift in Sources */,
 				1BE4DC211C7F23EC00385026 /* Location.swift in Sources */,

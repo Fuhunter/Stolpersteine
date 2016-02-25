@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PersonsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
 	@IBOutlet weak var tabelView: UITableView!
