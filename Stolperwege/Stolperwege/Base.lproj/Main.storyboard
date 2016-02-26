@@ -121,7 +121,6 @@
                                             <outlet property="personImage" destination="KWH-rB-cb7" id="Hmv-8N-pZz"/>
                                             <outlet property="personName" destination="sov-xA-8NR" id="Adz-pW-L1T"/>
                                             <outlet property="personStolperSteinLocation" destination="Kwn-6r-yA7" id="gpr-cr-sh8"/>
-                                            <segue destination="MDW-P5-R4O" kind="show" id="KEV-Ip-mr9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -153,6 +152,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="MSq-XT-Itk" id="rF3-3b-bUi"/>
+                        <outlet property="tableView" destination="HZZ-Ua-zIL" id="2z3-uc-XKK"/>
+                        <segue destination="MDW-P5-R4O" kind="show" identifier="toProfile" id="ET1-PZ-cSL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oj9-pR-2tf" userLabel="First Responder" sceneMemberID="firstResponder"/>

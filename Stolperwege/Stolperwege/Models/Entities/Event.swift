@@ -15,6 +15,18 @@ enum EventType {
     case Deportation
     case Education
     case Special
+    
+    var description: String {
+        switch self{
+            
+        case .Death: return "Death"
+        case .Birth: return "Birth"
+        case .Deportation: return "Deportation"
+        case .Education: return "Education"
+        case .Special: return "Special"
+            
+        }
+    }
 }
 
 class Event {
@@ -32,5 +44,9 @@ class Event {
         self.duration = duration
         self.description = description
         self.location = location
+    }
+    
+    class func eventImage(eventType: EventType) -> UIImage {
+        return UIImage(named: "\(eventType).png")!
     }
 }

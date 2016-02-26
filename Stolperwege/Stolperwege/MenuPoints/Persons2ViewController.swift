@@ -14,6 +14,9 @@ class Persons2ViewController: UIViewController, UITableViewDataSource, UITableVi
     
     let persons = ExampleData.persons
     
+    @IBOutlet var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
@@ -35,12 +38,21 @@ class Persons2ViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.personImage.image = person.image
         cell.personName.text = "\(person.name) \(person.familyName)"
-        cell.personStolperSteinLocation.text = person.stolperStein.city
+        cell.personStolperSteinLocation.text = "Stolpersteinwidmung: \(person.stolperStein.city)"
         
         return cell
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("toProfile", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? ProfileViewController {
+            controller.person = persons[tableView.indexPathForSelectedRow!.row]
+        }
+    }
     
 
 }
