@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet var personImage: UIImageView!
     
     
+    // delegation
+    
     
     var person: Person!
     

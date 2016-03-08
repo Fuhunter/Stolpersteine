@@ -38,7 +38,7 @@ class Persons2ViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.personImage.image = person.image
         cell.personName.text = "\(person.name) \(person.familyName)"
-        cell.personStolperSteinLocation.text = "Stolpersteinwidmung: \(person.stolperStein.city)"
+        cell.personStolperSteinLocation.text = person.stolperStein.city
         
         return cell
         
