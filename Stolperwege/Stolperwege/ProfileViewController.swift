@@ -10,24 +10,23 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var ereignisLabel: UILabel!
     @IBOutlet var personName: UILabel!
     @IBOutlet var personDevotmentCity: UILabel!
     @IBOutlet var personImage: UIImageView!
     
-    
     // delegation
-    
-    
+
     var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureData()
-        
+        print(person.events[0].type)
     }
 
-    
     func configureData(){
         personName.text = "\(person.name) \(person.familyName)"
         personDevotmentCity.text = person.stolperStein.city
@@ -40,8 +39,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
-        
         if person.events.count == 0 {
             ereignisLabel.text = "Noch keine Ereignisse vorhanden!"
             return UITableViewCell()
@@ -50,27 +47,24 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             let event = person.events[indexPath.row]
             
-            cell.eventType.text = event.type.description
+            cell.eventShortDescription.text = event.type.description
             cell.eventIcon.image = Event.eventImage(event.type)
             cell.eventLocation.text = event.location.city
             cell.eventDate.text = event.startDate.description
-            
-            print(cell.eventType.text = event.type.description)
-            
-            
+
+            print(event.type)
             return cell
         }
-        
-        
-        
-        //let dateFormatter = NSDateFormatter()
-        //dateFormatter.dateFormat = "yyyy-MM-dd"
-        
-        
-        
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("toEventDetail", sender: self)
+    }
     
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? EventDetailViewController {
+            controller.event = person.events[tableView.indexPathForSelectedRow!.row]
+        }
+    }
+
 }

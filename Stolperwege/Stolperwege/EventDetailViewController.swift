@@ -8,13 +8,14 @@
 
 import UIKit
 
-class EventViewController: UIViewController {
+class EventDetailViewController: UIViewController {
 
+    var event: Event!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
     }
-
 
 }

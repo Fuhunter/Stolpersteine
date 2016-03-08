@@ -25,7 +25,7 @@
 		1B4E53A81C80942500AFE9F5 /* Oswald-Stencil.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4E53981C80942500AFE9F5 /* Oswald-Stencil.ttf */; };
 		1B4E53A91C80942500AFE9F5 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1B4E53991C80942500AFE9F5 /* SIL Open Font License.txt */; };
 		1B4E53AB1C80976D00AFE9F5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E53AA1C80976D00AFE9F5 /* ProfileViewController.swift */; };
-		1B4E53AF1C80978C00AFE9F5 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E53AE1C80978C00AFE9F5 /* EventViewController.swift */; };
+		1B4E53AF1C80978C00AFE9F5 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E53AE1C80978C00AFE9F5 /* EventDetailViewController.swift */; };
 		1B4E53B11C809EAC00AFE9F5 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E53B01C809EAC00AFE9F5 /* EventsTableViewCell.swift */; };
 		1B72039D1BFA76A4004CB4F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72039C1BFA76A4004CB4F0 /* AppDelegate.swift */; };
 		1B72039F1BFA76A4004CB4F0 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72039E1BFA76A4004CB4F0 /* PersonsViewController.swift */; };
@@ -39,6 +39,7 @@
 		1B7FFB521BFE1BAE00DE9F99 /* BuildingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7FFB511BFE1BAE00DE9F99 /* BuildingsViewController.swift */; };
 		1B7FFB541BFE1BFD00DE9F99 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7FFB531BFE1BFD00DE9F99 /* TimeLineViewController.swift */; };
 		1B7FFB561BFE24B500DE9F99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7FFB551BFE24B500DE9F99 /* Constants.swift */; };
+		1BCC17E11C8F4C8A00547CEC /* EventsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC17E01C8F4C8A00547CEC /* EventsMapViewController.swift */; };
 		1BE4DC201C7F23EC00385026 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC1B1C7F23EC00385026 /* Event.swift */; };
 		1BE4DC211C7F23EC00385026 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC1C1C7F23EC00385026 /* Location.swift */; };
 		1BE4DC221C7F23EC00385026 /* Memorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC1D1C7F23EC00385026 /* Memorial.swift */; };
@@ -94,7 +95,7 @@
 		1B4E53981C80942500AFE9F5 /* Oswald-Stencil.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Stencil.ttf"; sourceTree = "<group>"; };
 		1B4E53991C80942500AFE9F5 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		1B4E53AA1C80976D00AFE9F5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1B4E53AE1C80978C00AFE9F5 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		1B4E53AE1C80978C00AFE9F5 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		1B4E53B01C809EAC00AFE9F5 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		1B7203991BFA76A4004CB4F0 /* Stolperwege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stolperwege.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B72039C1BFA76A4004CB4F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		1B7FFB511BFE1BAE00DE9F99 /* BuildingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingsViewController.swift; sourceTree = "<group>"; };
 		1B7FFB531BFE1BFD00DE9F99 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		1B7FFB551BFE24B500DE9F99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1BCC17E01C8F4C8A00547CEC /* EventsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsMapViewController.swift; sourceTree = "<group>"; };
 		1BE4DC1B1C7F23EC00385026 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1BE4DC1C1C7F23EC00385026 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1BE4DC1D1C7F23EC00385026 /* Memorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memorial.swift; sourceTree = "<group>"; };
@@ -316,7 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				1B4E53AA1C80976D00AFE9F5 /* ProfileViewController.swift */,
-				1B4E53AE1C80978C00AFE9F5 /* EventViewController.swift */,
+				1B4E53AE1C80978C00AFE9F5 /* EventDetailViewController.swift */,
+				1BCC17E01C8F4C8A00547CEC /* EventsMapViewController.swift */,
 			);
 			name = Persons;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				TargetAttributes = {
 					1B7203981BFA76A4004CB4F0 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 3994Y2UB76;
 					};
 					1B7203AC1BFA76A4004CB4F0 = {
 						CreatedOnToolsVersion = 7.1;
@@ -596,8 +600,9 @@
 				1BE4DC351C7F545300385026 /* Persons2ViewController.swift in Sources */,
 				A5DB2C9D1BFD37490043C305 /* MapViewController.swift in Sources */,
 				1B7FFB541BFE1BFD00DE9F99 /* TimeLineViewController.swift in Sources */,
+				1BCC17E11C8F4C8A00547CEC /* EventsMapViewController.swift in Sources */,
 				1BE4DC211C7F23EC00385026 /* Location.swift in Sources */,
-				1B4E53AF1C80978C00AFE9F5 /* EventViewController.swift in Sources */,
+				1B4E53AF1C80978C00AFE9F5 /* EventDetailViewController.swift in Sources */,
 				A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */,
 				1BE4DC221C7F23EC00385026 /* Memorial.swift in Sources */,
 				1B7FFB4D1BFE154D00DE9F99 /* HistoricalMapViewController.swift in Sources */,
@@ -750,10 +755,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Stolperwege/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkayswork.Stolperwege;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stolperwege/Stolperwege-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -765,10 +773,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Stolperwege/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkayswork.Stolperwege;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stolperwege/Stolperwege-Bridging-Header.h";
 			};
 			name = Release;

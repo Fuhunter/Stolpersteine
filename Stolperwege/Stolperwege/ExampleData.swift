@@ -43,7 +43,7 @@ class ExampleData {
     
     class var persons: [Person]
     {
-        let dataArray : [PersonDataStore] = [("Friedrich", "Test" , "Münzer", nil, "male", NSDate(), [], "friedrich.jpg", Stolperstein(coordinate: CLLocationCoordinate2DMake(50.11092209999999, 8.682126700000026), city: "Frankfurt"))]
+        let dataArray : [PersonDataStore] = [("Friedrich", "Test" , "Münzer", nil, "male", NSDate(), eventsOne, "friedrich.jpg", Stolperstein(coordinate: CLLocationCoordinate2DMake(50.11092209999999, 8.682126700000026), city: "Frankfurt"))]
         
         return dataArray.map({Person(name: $0.name, title: $0.title, familyName: $0.familyName, familyMaidenName: $0.familyMaidenName, sex: $0.sex, birthDate: $0.birthDate, events: $0.events, image: UIImage(named: $0.imageName)!, stolperStein: $0.stolperStein)})
     }
