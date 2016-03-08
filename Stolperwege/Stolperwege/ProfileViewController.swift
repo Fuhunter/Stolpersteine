@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var showMapButton: UIButton!
+    
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var ereignisLabel: UILabel!
@@ -31,6 +33,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         personName.text = "\(person.name) \(person.familyName)"
         personDevotmentCity.text = person.stolperStein.city
         personImage.image = person.image
+        
+        showMapButton.layer.borderColor = UIColor.whiteColor().CGColor
+        showMapButton.layer.borderWidth = 2
+        showMapButton.layer.cornerRadius = 15
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

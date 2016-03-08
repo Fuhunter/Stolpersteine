@@ -9,5 +9,8 @@
 import Foundation
 
 public class DesignMethods {
-    // test
+    
+    /// MARK: add a border with color and a cornerradius to a specific target
+    
+    
 }

@@ -129,6 +129,7 @@
                         <outlet property="personDevotmentCity" destination="BaK-7n-VPE" id="Rgs-Qn-WaR"/>
                         <outlet property="personImage" destination="6t1-Ic-0yL" id="lJD-8G-q92"/>
                         <outlet property="personName" destination="BKg-mR-H6F" id="WoX-Yn-ulC"/>
+                        <outlet property="showMapButton" destination="DzR-Lf-TtK" id="Gpd-IV-NsE"/>
                         <outlet property="tableView" destination="BVY-vV-DwZ" id="Eqr-OO-aBT"/>
                         <segue destination="VRE-AZ-4oN" kind="show" identifier="toEventDetail" id="Xhb-XD-eRz"/>
                     </connections>
@@ -264,6 +265,13 @@ Seine zweite Frau starb 1935. Am 14. November des gleichen Jahres wurde er offiz
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ereignis X" id="ZsU-Mt-tOz"/>
+                    <connections>
+                        <outlet property="eventDescription" destination="uBP-Vp-y8E" id="Tly-wX-add"/>
+                        <outlet property="eventDuration" destination="a8H-wR-2Gm" id="NPG-8R-MBf"/>
+                        <outlet property="eventLocation" destination="j6U-Fz-qs0" id="Sdh-ZX-1Cq"/>
+                        <outlet property="eventShortDescription" destination="Ngu-bv-Yj3" id="eK5-jA-38b"/>
+                        <outlet property="eventStartDate" destination="AMH-fz-435" id="3Af-YC-zZ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5A-K8-q7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
