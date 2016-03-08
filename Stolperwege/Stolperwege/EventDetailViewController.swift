@@ -29,7 +29,7 @@ class EventDetailViewController: UIViewController {
         eventDuration.text = "Dauer/Ende: \(String(event.duration))"
         eventLocation.text = "Ort: \(event.location.city)"
         eventDescription.text = event.description
-        
+
         configureDesign()
     }
     
