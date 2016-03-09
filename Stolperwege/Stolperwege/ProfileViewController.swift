@@ -71,6 +71,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let controller = segue.destinationViewController as? EventDetailViewController {
             controller.event = person.events[tableView.indexPathForSelectedRow!.row]
         }
+		
+		if let controller = segue.destinationViewController as? EventsMapViewController {
+			controller.events = person.events
+		}
     }
 
 }
