@@ -151,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-6r-KoN">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,10 +224,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-Vp-y8E">
                                 <rect key="frame" x="20" y="210" width="560" height="370"/>
                                 <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="K7U-aG-bj1"/>
                                 </constraints>
-                                <mutableString key="text">Münzer stammte aus einer jüdischen Kaufmannsfamilie, ging zum Studium an die Universität Leipzig und 1887 an die Universität Berlin, wo er unter der Betreuung Otto Hirschfelds seine Dissertation De Gente Valeria schrieb. Opponenten waren Bogdan Krieger, Walter Henze und Ernst Kornemann. 1893 fuhr er nach Rom, wo Georg Wissowa ihn dafür gewann, biographische Artikel für den Pauly-Wissowa zu verfassen. Von Rom aus reiste er nach Athen weiter, wo er an Ausgrabungen auf der Akropolis teilnahm. Hier traf er Clara Engels, die er zwei Jahre später, am 4. September 1897, heiratete.
+                                <string key="text">Münzer stammte aus einer jüdischen Kaufmannsfamilie, ging zum Studium an die Universität Leipzig und 1887 an die Universität Berlin, wo er unter der Betreuung Otto Hirschfelds seine Dissertation De Gente Valeria schrieb. Opponenten waren Bogdan Krieger, Walter Henze und Ernst Kornemann. 1893 fuhr er nach Rom, wo Georg Wissowa ihn dafür gewann, biographische Artikel für den Pauly-Wissowa zu verfassen. Von Rom aus reiste er nach Athen weiter, wo er an Ausgrabungen auf der Akropolis teilnahm. Hier traf er Clara Engels, die er zwei Jahre später, am 4. September 1897, heiratete.
 
 Mittlerweile (1896) war Münzer zum unbezahlten Dozenten an der Universität Basel ernannt worden, so dass er und Clara von der Unterstützung ihrer Eltern und seinen biographischen Artikeln leben mussten. 1902 wurde ihm in Basel der zweite Lehrstuhl für klassische Philologie übertragen. 1912 nahm er einen Ruf nach Königsberg an, wodurch er deutscher Beamter wurde.
 
@@ -235,7 +236,7 @@ Clara starb am 15. Dezember 1918 während der Grippe-Pandemie (Spanische Grippe)
 
 Münzer war generell apolitisch, 1933 aber begann die Politik sich für ihn zu interessieren, als Kommunisten, „Nichtarier“ und Gegner der NSDAP aus dem öffentlichen Dienst entfernt wurden. Beamte aus der Zeit vor 1914 wurden offiziell freigestellt, aber seine Biographen belegen seine fortgesetzte Beschäftigung auf Bitten einflussreicher Kollegen und früherer Studenten hin. Im Januar 1935 verlangte ein neues Gesetz die Entfernung aller Dozenten und Professoren, die älter als 65 Jahre waren (womit Platz für Nazi-Sympathisanten geschaffen werden sollte). Münzer ging am 23. Juli 1935 in Pension.
 
-Seine zweite Frau starb 1935. Am 14. November des gleichen Jahres wurde er offiziell als Jude klassifiziert, woraufhin viele Kollegen und Bekannte sich von ihm distanzierten. Dennoch arbeitete er weiter an den Biographien für den Pauly-Wissowa, und sie wurden dort auch angenommen, entgegen dem Gesetz, das Juden jede publizistische Arbeit verbot. 1938 zwang ihn ein weiteres Gesetz, einen jüdischen Beinamen anzunehmen, so dass er von nun an offiziell als „der Jude Friedrich Israel Münzer“ bezeichnet wurde. In einem Brief an Ronald Syme vom 12. Dezember 1938 schrieb er, dass die geänderte Situation ihn tief deprimiere, dass er seine Lage aber als deutlich besser als die vieler anderer ansehe.</mutableString>
+Seine zweite Frau starb 1935. Am 14. November des gleichen Jahres wurde er offiziell als Jude klassifiziert, woraufhin viele Kollegen und Bekannte sich von ihm distanzierten. Dennoch arbeitete er weiter an den Biographien für den Pauly-Wissowa, und sie wurden dort auch angenommen, entgegen dem Gesetz, das Juden jede publizistische Arbeit verbot. 1938 zwang ihn ein weiteres Gesetz, einen jüdischen Beinamen anzunehmen, so dass er von nun an offiziell als „der Jude Friedrich Israel Münzer“ bezeichnet wurde. In einem Brief an Ronald Syme vom 12. Dezember 1938 schrieb er, dass die geänderte Situation ihn tief deprimiere, dass er seine Lage aber als deutlich besser als die vieler anderer ansehe.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
