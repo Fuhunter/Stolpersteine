@@ -51,6 +51,10 @@
 		1BE4DC351C7F545300385026 /* Persons2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC341C7F545300385026 /* Persons2ViewController.swift */; };
 		1BE4DC371C7F606C00385026 /* friedrich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BE4DC361C7F606C00385026 /* friedrich.jpg */; };
 		4D78E8191BFCA8EF0071E131 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */; };
+		4DE774681CA578F6008EBA09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE774671CA578F6008EBA09 /* LoginViewController.swift */; };
+		4DE7746A1CA578FD008EBA09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE774691CA578FD008EBA09 /* RegisterViewController.swift */; };
+		4DE7746C1CA582FC008EBA09 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7746B1CA582FC008EBA09 /* Networker.swift */; };
+		4DE7746E1CA58AB7008EBA09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7746D1CA58AB7008EBA09 /* Extensions.swift */; };
 		A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */; };
 		A5DB2C9A1BFD096D0043C305 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB2C991BFD096D0043C305 /* SWRevealViewController.m */; };
 		A5DB2C9D1BFD37490043C305 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB2C9C1BFD37490043C305 /* MapViewController.swift */; };
@@ -127,6 +131,10 @@
 		1BE4DC341C7F545300385026 /* Persons2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persons2ViewController.swift; sourceTree = "<group>"; };
 		1BE4DC361C7F606C00385026 /* friedrich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = friedrich.jpg; sourceTree = "<group>"; };
 		4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		4DE774671CA578F6008EBA09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4DE774691CA578FD008EBA09 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4DE7746B1CA582FC008EBA09 /* Networker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		4DE7746D1CA58AB7008EBA09 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7F7A939DCC0C2AD30B22E930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		A5DB2C971BFD096D0043C305 /* Stolperwege-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stolperwege-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				1B4E53881C80941B00AFE9F5 /* Fonts */,
+				4DE7746D1CA58AB7008EBA09 /* Extensions.swift */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";
@@ -365,6 +374,8 @@
 				1BE4DC311C7F4B2200385026 /* Settings */,
 				A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */,
 				4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */,
+				4DE774671CA578F6008EBA09 /* LoginViewController.swift */,
+				4DE774691CA578FD008EBA09 /* RegisterViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -374,6 +385,7 @@
 			children = (
 				1BE4DC1A1C7F23EC00385026 /* Entities */,
 				1B7FFB551BFE24B500DE9F99 /* Constants.swift */,
+				4DE7746B1CA582FC008EBA09 /* Networker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -603,6 +615,7 @@
 				1BCC17E11C8F4C8A00547CEC /* EventsMapViewController.swift in Sources */,
 				1BE4DC211C7F23EC00385026 /* Location.swift in Sources */,
 				1B4E53AF1C80978C00AFE9F5 /* EventDetailViewController.swift in Sources */,
+				4DE774681CA578F6008EBA09 /* LoginViewController.swift in Sources */,
 				A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */,
 				1BE4DC221C7F23EC00385026 /* Memorial.swift in Sources */,
 				1B7FFB4D1BFE154D00DE9F99 /* HistoricalMapViewController.swift in Sources */,
@@ -612,8 +625,11 @@
 				1B72039D1BFA76A4004CB4F0 /* AppDelegate.swift in Sources */,
 				1B7FFB501BFE1B9500DE9F99 /* SettingsViewController.swift in Sources */,
 				1BE4DC241C7F23EC00385026 /* Stolperstein.swift in Sources */,
+				4DE7746C1CA582FC008EBA09 /* Networker.swift in Sources */,
+				4DE7746A1CA578FD008EBA09 /* RegisterViewController.swift in Sources */,
 				1BE4DC231C7F23EC00385026 /* Person.swift in Sources */,
 				1BE4DC201C7F23EC00385026 /* Event.swift in Sources */,
+				4DE7746E1CA58AB7008EBA09 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
