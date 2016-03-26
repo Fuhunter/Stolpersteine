@@ -51,8 +51,13 @@
 		1BE4DC351C7F545300385026 /* Persons2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4DC341C7F545300385026 /* Persons2ViewController.swift */; };
 		1BE4DC371C7F606C00385026 /* friedrich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BE4DC361C7F606C00385026 /* friedrich.jpg */; };
 		4D78E8191BFCA8EF0071E131 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78E8181BFCA8EF0071E131 /* ContainerViewController.swift */; };
+		4DE774681CA578F6008EBA09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE774671CA578F6008EBA09 /* LoginViewController.swift */; };
+		4DE7746A1CA578FD008EBA09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE774691CA578FD008EBA09 /* RegisterViewController.swift */; };
+		4DE7746C1CA582FC008EBA09 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7746B1CA582FC008EBA09 /* Networker.swift */; };
+		4DE7746E1CA58AB7008EBA09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7746D1CA58AB7008EBA09 /* Extensions.swift */; };
 		A5553EB61CA6E76300919CBD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5553EB51CA6E76300919CBD /* SwiftyJSON.framework */; };
 		A5553EB81CA6E76700919CBD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5553EB71CA6E76700919CBD /* Alamofire.framework */; };
+		A568540E1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A568540D1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework */; };
 		A58D14C51BFA971A00B3251A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */; };
 		A5DB2C9A1BFD096D0043C305 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB2C991BFD096D0043C305 /* SWRevealViewController.m */; };
 		A5DB2C9D1BFD37490043C305 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB2C9C1BFD37490043C305 /* MapViewController.swift */; };
@@ -136,6 +141,8 @@
 		7F7A939DCC0C2AD30B22E930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A5553EB51CA6E76300919CBD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Stolperwege-hkmvcezbegwfysfpkshtwcdqjevb/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		A5553EB71CA6E76700919CBD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Stolperwege-hkmvcezbegwfysfpkshtwcdqjevb/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
+		A568540D1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDZSwiftCommonCrypto.framework; path = "../../../Library/Developer/Xcode/DerivedData/Stolperwege-hkmvcezbegwfysfpkshtwcdqjevb/Build/Products/Debug-iphonesimulator/IDZSwiftCommonCrypto.framework"; sourceTree = "<group>"; };
+		A57782251CA6F0200087DF7B /* IDZSwiftCommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDZSwiftCommonCrypto.framework; path = "Pods/../build/Debug-iphoneos/IDZSwiftCommonCrypto.framework"; sourceTree = "<group>"; };
 		A58D14C41BFA971A00B3251A /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		A5DB2C971BFD096D0043C305 /* Stolperwege-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stolperwege-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5DB2C981BFD096D0043C305 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -150,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A568540E1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework in Frameworks */,
 				A5553EB81CA6E76700919CBD /* Alamofire.framework in Frameworks */,
 				A5553EB61CA6E76300919CBD /* SwiftyJSON.framework in Frameworks */,
 				A5DB2C9F1BFD393C0043C305 /* MapKit.framework in Frameworks */,
@@ -353,6 +361,8 @@
 		1E45DD2862962794795F9A31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A568540D1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework */,
+				A57782251CA6F0200087DF7B /* IDZSwiftCommonCrypto.framework */,
 				A5553EB71CA6E76700919CBD /* Alamofire.framework */,
 				A5553EB51CA6E76300919CBD /* SwiftyJSON.framework */,
 				EC8F78B78FF47F6FABDDE541 /* Pods.framework */,
@@ -777,6 +787,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Stolperwege/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkayswork.Stolperwege;
@@ -795,6 +809,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Stolperwege/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkayswork.Stolperwege;
