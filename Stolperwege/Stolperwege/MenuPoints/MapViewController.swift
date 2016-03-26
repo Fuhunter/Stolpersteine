@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import Alamofire
+import SwiftyJSON
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -29,7 +31,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if self.revealViewController() != nil {
             self.menuButton.target = self.revealViewController()
-            self.menuButton.action = "revealToggle:"
+            self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 		
@@ -59,10 +61,69 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 			
 			self.mapView.addAnnotation(annotation)
 		}
+		
+		self.getUserLocations()
     }
 	
-	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+	func getUserLocations() -> Void {
+		let URL = restAPI + "getlocations"
 		
+		Alamofire.request(.GET, URL, parameters: ["target": "dummy"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+			
+			guard let value = response.result.value else {
+				return
+			}
+			
+			let jsonResponse = JSON(value)
+			
+			if !jsonResponse["success"].bool! {
+				let alert = UIAlertController(title: "Could not retrieve Locations", message: jsonResponse["message"].string, preferredStyle: .Alert)
+				alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+				
+				self.presentViewController(alert, animated: true, completion: nil)
+				
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+				return
+			}
+			
+			// FIXME
+			
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+		}
+	}
+	
+	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		if !locationShare {
+			return
+		}
+		
+		let latitude = locations.first?.coordinate.latitude
+		let longitude = locations.first?.coordinate.longitude
+		
+		let URL = restAPI + "setlocation"
+		
+		Alamofire.request(.POST, URL, parameters: ["target": "dummy", "lat": latitude!, "lon": longitude!], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+			
+			guard let value = response.result.value else {
+				return
+			}
+			
+			let jsonResponse = JSON(value)
+			
+			
+			if jsonResponse["success"].bool! {
+				return
+			}
+			
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+			
+			let alert = UIAlertController(title: "Fehler bei Locationupdate", message: jsonResponse["message"].string, preferredStyle: .Alert)
+			alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+			
+			self.presentViewController(alert, animated: true, completion: nil)
+		}
 	}
 	
 	func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
