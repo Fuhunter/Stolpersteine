@@ -10,6 +10,8 @@ import Foundation
 import MapKit
 import UIKit
 
+var locationShare: Bool! = false
+
 /**
 Used for every kind of location, e.g historical locations, locations linked to a person (birthplace, deathplace).
     
@@ -50,7 +52,5 @@ class Location {
         self.city = city
         self.images = images ?? [UIImage()]
     }
-    
-    
 
 }
