@@ -21,6 +21,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(sender: AnyObject) {
+        let username = userNameInput.text!
+        let password = passwordInput.text!
+        
+        print(Networker.loginUser(username, password: password))
+//        if Networker.loginUser(username, password: password){
+//            performSegueWithIdentifier("toMenu", sender: self)
+//        } else {
+//            let alert = UIAlertController(title: "Falscher Login", message: "Nutzername oder Passwort falsch", preferredStyle: .Alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//            self.presentViewController(alert, animated: true, completion: nil)
+//        }
+        
+
+        
     }
 
 }
