@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet var userNameInput: UITextField!
     @IBOutlet var passwordInput: UITextField!
 
-    
+    let networker = Networker()
     
     override func viewDidLoad() {
         super.viewDidLoad()

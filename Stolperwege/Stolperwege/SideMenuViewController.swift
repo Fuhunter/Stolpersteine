@@ -22,21 +22,23 @@ class SideMenuViewController: UITableViewController {
     }
     
 }
+
+    
     /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch self.selectedMenuItem {
         case 0:
-            break // Karten
-        case 1:  // Personen
+            break  Karten
+        case 1:   Personen
             self.performSegueWithIdentifier("PersonSegue", sender: sender)
             break
-        case 2: // Historische Karten
+        case 2:  Historische Karten
             break
-        case 3: // 3D Gebäude
+        case 3:  3D Gebäude
             break
-        case 4: // Zeitlinien
+        case 4:  Zeitlinien
             break
-        case 5: // Einstellungen
+        case 5:  Einstellungen
             break
         default:
             break
