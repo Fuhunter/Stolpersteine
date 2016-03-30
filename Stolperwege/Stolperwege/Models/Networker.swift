@@ -33,7 +33,7 @@ class Networker {
         
         // Registering users not possible due to missing API from teachers
         
-        Alamofire.request(.POST, registerURL , parameters: ["username": "\(userName)", "password": "\(password.MD5)","realname": "\(fullName)"], encoding: ParameterEncoding.URL, headers: nil).responseJSON { response in
+        Alamofire.request(.POST, registerURL , parameters: ["username": "\(userName)", "password": "\(password.MD5)","realname": "\(fullName)"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
             
             if let JSON = response.result.value {
                 print(JSON)
@@ -47,22 +47,22 @@ class Networker {
     class func loginUser(username: String, password: String, completitonHandler: Bool -> ()){
         
         
-        Alamofire.request(.POST, loginURL, parameters: ["username": "\(username)","password": "\(password.MD5)"], encoding: ParameterEncoding.URL, headers: nil).responseJSON {response in
+        Alamofire.request(.POST, loginURL, parameters: ["username": "\(username)","password": "\(password.MD5)"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
             
-            print(response.result.value)   // result of response serialization
-            
-            if let value = response.result.value {
-                let json = JSON(value)
-                let onlineStatus = json["http://ontologies.hucompute.org/StolperwegeUser#status"].stringValue
-                if onlineStatus == "online"{
-                    print("onlinestatus: \(onlineStatus)")
-                    completitonHandler(true)
-                    NSUserDefaults.standardUserDefaults().setObject(json["uri"].stringValue, forKey: "userURI")
-                } else {
-                    completitonHandler(false)
-                }
-                
-            }
+            guard let value = response.result.value else {
+				return
+			}
+			
+			let json = JSON(value)
+			
+			let onlineStatus = json["http://ontologies.hucompute.org/StolperwegeUser#status"].stringValue
+			
+			if onlineStatus == "online"{
+				completitonHandler(true)
+				NSUserDefaults.standardUserDefaults().setObject(json["uri"].stringValue, forKey: "userURI")
+			} else {
+				completitonHandler(false)
+			}
         }
     }
     
@@ -79,7 +79,11 @@ class Networker {
         Alamofire.request(.POST, setUserLocationURL, parameters: ["target": userURI,"lat": "\(latitude)","lon": "\(longitude)"], encoding: ParameterEncoding.URL, headers: nil).responseJSON { response in
             
             print(response.result)
-            if let value = response.result.value {print(value)}
+            guard let value = response.result.value else {
+				return
+			}
+			
+			print(value)
         }
     }
     

@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var menuButton: UIBarButtonItem!
 	@IBOutlet weak var locationShareSwitch: UISwitch!
+	@IBOutlet weak var setLocationButton: UIButton!
     
     let locationManager = CLLocationManager()
     var userLocation: CLLocationCoordinate2D? = nil
@@ -36,23 +37,34 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
         
 		
 		if (locationShare != nil) && locationShare {
-			locationShareSwitch.setOn(true, animated: true)
-            Networker.setUserLocation(userLocation!)
+			self.locationShareSwitch.setOn(true, animated: true)
+			guard let userLocation = self.userLocation else {
+				return
+			}
+			
+			Networker.setUserLocation(userLocation)
+			self.setLocationButton.enabled = true
 		} else {
-			locationShareSwitch.setOn(false, animated: true)
+			self.locationShareSwitch.setOn(false, animated: true)
+			self.setLocationButton.enabled = false
 		}
     }
 	@IBAction func locationSwitch(sender: UISwitch) {
 		locationShare = !locationShare
+		self.setLocationButton.enabled = locationShare
 	}
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        userLocation = locations[0].coordinate
+        self.userLocation = locations[0].coordinate
     }
     
     // Before tapping the button, turn the switch on, otherwise the userLocation will be nil -> App crashes!
     @IBAction func setUserLocation(sender: AnyObject) {
-        Networker.setUserLocation(userLocation!)
+		guard let location = self.userLocation else {
+			return
+		}
+		
+        Networker.setUserLocation(location)
     }
     
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zEu-qb-fGr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zEu-qb-fGr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -159,7 +159,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LsA-uu-icM" id="Gca-TZ-ctd">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KWH-rB-cb7">
@@ -258,7 +258,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Q1-mT-ioN" id="PRH-mD-ScN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -425,7 +425,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3D Buildings" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-cO-EG5">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Special" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-cO-EG5">
                                                     <rect key="frame" x="10" y="14" width="32" height="32"/>
                                                 </imageView>
                                             </subviews>
@@ -733,6 +733,7 @@
                     <connections>
                         <outlet property="locationShareSwitch" destination="s36-pH-3Xc" id="efi-1Z-qVz"/>
                         <outlet property="menuButton" destination="8mV-Aw-X10" id="yMN-Pj-gTb"/>
+                        <outlet property="setLocationButton" destination="NAP-qX-q4L" id="0Ay-T1-kFV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Kz-cj-uYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -855,13 +856,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3D Buildings" width="32" height="32"/>
         <image name="Historical Maps" width="32" height="32"/>
         <image name="Logout" width="32" height="32"/>
         <image name="Maps" width="32" height="32"/>
         <image name="MenuButton" width="32" height="32"/>
         <image name="Persons" width="32" height="32"/>
         <image name="Settings" width="32" height="32"/>
+        <image name="Special" width="32" height="32"/>
         <image name="Timelines" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>

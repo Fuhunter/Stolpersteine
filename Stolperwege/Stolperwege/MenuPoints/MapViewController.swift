@@ -19,6 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 	
 	// Get Users Location
 	let locationManager: CLLocationManager! = CLLocationManager()
+	var userLocation: CLLocationCoordinate2D?
 	
 	// ExampleData
 	let examplePersons = ExampleData.persons
@@ -93,17 +94,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 		}
 	}
 	
-	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		if !locationShare {
-			return
-		}
-		
-		let latitude = locations.first?.coordinate.latitude
-		let longitude = locations.first?.coordinate.longitude
-		
+	func updateUserLocation(latitude latitude: CLLocationDegrees!, longitude: CLLocationDegrees!) -> Void {
 		let URL = restAPI + "setlocation"
 		
-		Alamofire.request(.POST, URL, parameters: ["target": "dummy", "lat": latitude!, "lon": longitude!], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+		Alamofire.request(.POST, URL, parameters: ["target": "dummy", "lat": latitude, "lon": longitude], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
 			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
 			
 			guard let value = response.result.value else {
@@ -119,11 +113,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 			
 			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 			
+			NSLog("ALERT, NO Locationpdate")
+			
 			let alert = UIAlertController(title: "Fehler bei Locationupdate", message: jsonResponse["message"].string, preferredStyle: .Alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
 			
 			self.presentViewController(alert, animated: true, completion: nil)
 		}
+	}
+	
+	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		if !locationShare {
+			return
+		}
+		
+		self.userLocation = locations[0].coordinate
+		
+		self.updateUserLocation(latitude: self.userLocation!.latitude, longitude: self.userLocation!.longitude)
 	}
 	
 	func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
