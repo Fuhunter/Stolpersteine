@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CjT-fY-lXV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+            <string>Oswald-Bold</string>
+        </mutableArray>
+        <mutableArray key="Oswald-Heavy.ttf">
+            <string>Oswald-Heavy</string>
+        </mutableArray>
+        <mutableArray key="Oswald-Light.ttf">
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+        </mutableArray>
+        <mutableArray key="Oswald-Medium.ttf">
+            <string>Oswald-Medium</string>
+            <string>Oswald-Medium</string>
+        </mutableArray>
+        <mutableArray key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="lkf-6Z-QOx">
+            <objects>
+                <viewController id="CjT-fY-lXV" customClass="ProfileViewController" customModule="Stolperwege" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AVa-ss-6XJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cUu-id-NfC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F7N-hb-ew3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6t1-Ic-0yL">
+                                <rect key="frame" x="20" y="28" width="70" height="70"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BVY-vV-DwZ">
+                                <rect key="frame" x="0.0" y="169" width="600" height="431"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="u2A-hn-CgZ" customClass="EventsTableViewCell" customModule="Stolperwege" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u2A-hn-CgZ" id="kjo-8F-U35">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.1.1945" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj5-Or-cgq">
+                                                    <rect key="frame" x="65" y="16" width="96" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ort: Frankfurt am Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyL-oM-sf8">
+                                                    <rect key="frame" x="160" y="15" width="153" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQ7-G5-eL3">
+                                                    <rect key="frame" x="17" y="11" width="40" height="40"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kurzbeschreibung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sau-D0-6jG">
+                                                    <rect key="frame" x="17" y="59" width="296" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xt1-JR-gAI">
+                                                    <rect key="frame" x="321" y="35" width="50" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="15"/>
+                                                    <state key="normal" title="Relations">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="cmS-ri-U9r" kind="show" identifier="relationSegue" id="cap-kO-Pr0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="eventDate" destination="sj5-Or-cgq" id="5nF-Rx-TLi"/>
+                                            <outlet property="eventIcon" destination="xQ7-G5-eL3" id="mfA-Dz-kgs"/>
+                                            <outlet property="eventLocation" destination="fyL-oM-sf8" id="ycP-ox-esL"/>
+                                            <outlet property="eventShortDescription" destination="Sau-D0-6jG" id="inD-q3-lev"/>
+                                            <outlet property="relationsButton" destination="xt1-JR-gAI" id="5nd-Us-adc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CjT-fY-lXV" id="Mip-OA-v3P"/>
+                                    <outlet property="delegate" destination="CjT-fY-lXV" id="Ye0-Nj-1Rz"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lebensereignisse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApL-FK-F52">
+                                <rect key="frame" x="20" y="121" width="123" height="40"/>
+                                <fontDescription key="fontDescription" name="Oswald-Heavy" family="Oswald" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frankfurt am Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaK-7n-VPE">
+                                <rect key="frame" x="98" y="68" width="170" height="30"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Mustermann" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKg-mR-H6F">
+                                <rect key="frame" x="98" y="28" width="220" height="30"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzR-Lf-TtK">
+                                <rect key="frame" x="158" y="126" width="140" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="auf Karte">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Iix-kG-RYe" kind="show" id="beW-ZP-heY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="ereignisLabel" destination="ApL-FK-F52" id="l5I-RB-K2x"/>
+                        <outlet property="personDevotmentCity" destination="BaK-7n-VPE" id="Rgs-Qn-WaR"/>
+                        <outlet property="personImage" destination="6t1-Ic-0yL" id="lJD-8G-q92"/>
+                        <outlet property="personName" destination="BKg-mR-H6F" id="WoX-Yn-ulC"/>
+                        <outlet property="showMapButton" destination="DzR-Lf-TtK" id="Gpd-IV-NsE"/>
+                        <outlet property="tableView" destination="BVY-vV-DwZ" id="Eqr-OO-aBT"/>
+                        <segue destination="VRE-AZ-4oN" kind="show" identifier="toEventDetail" id="Xhb-XD-eRz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jv-LP-A0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="508"/>
+        </scene>
+        <!--Events Map View Controller-->
+        <scene sceneID="FOr-CQ-CKJ">
+            <objects>
+                <viewController id="Iix-kG-RYe" customClass="EventsMapViewController" customModule="Stolperwege" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ot-a5-E6y"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kz6-ps-feP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RHB-kT-jIj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-6r-KoN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventsMap" destination="gpS-6r-KoN" id="XEE-pc-MY5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lET-Ll-0gK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="1190"/>
+        </scene>
+        <!--Relations View Controller-->
+        <scene sceneID="LVF-lT-1Hl">
+            <objects>
+                <viewController id="cmS-ri-U9r" customClass="RelationsViewController" customModule="Stolperwege" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7sV-wd-P1E"/>
+                        <viewControllerLayoutGuide type="bottom" id="59l-Un-one"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fvm-UG-xUR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Relations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEX-Q4-Sbr">
+                                <rect key="frame" x="254" y="20" width="92" height="58"/>
+                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1e-09-G6c">
+                                <rect key="frame" x="32" y="100" width="272" height="42"/>
+                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iEX-Q4-Sbr" firstAttribute="centerX" secondItem="Fvm-UG-xUR" secondAttribute="centerX" id="WlI-cT-mlc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="personLabel" destination="B1e-09-G6c" id="pbX-2C-4a1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96o-f9-OmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="-217"/>
+        </scene>
+        <!--Ereignis X-->
+        <scene sceneID="8aP-2n-dF1">
+            <objects>
+                <viewController id="VRE-AZ-4oN" customClass="EventDetailViewController" customModule="Stolperwege" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="usx-wl-azw"/>
+                        <viewControllerLayoutGuide type="bottom" id="BpZ-Xw-gXg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ljz-Kd-Tbe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurzbeschreibung - Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngu-bv-Yj3">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yxi-nz-ZUc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschreibung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF1-yN-76V">
+                                <rect key="frame" x="20" y="173" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H3g-zN-aNQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Startdatum: 1.1.2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMH-fz-435">
+                                <rect key="frame" x="20" y="71" width="560" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="GiJ-sm-ZHw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dauer/Ende: 1.2.2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8H-wR-2Gm">
+                                <rect key="frame" x="20" y="105" width="560" height="25"/>
+                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ort: Frankfurt am Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-Fz-qs0">
+                                <rect key="frame" x="20" y="139" width="560" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ziS-4x-lB8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-Vp-y8E">
+                                <rect key="frame" x="20" y="210" width="560" height="370"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="370" id="K7U-aG-bj1"/>
+                                </constraints>
+                                <string key="text">Münzer stammte aus einer jüdischen Kaufmannsfamilie, ging zum Studium an die Universität Leipzig und 1887 an die Universität Berlin, wo er unter der Betreuung Otto Hirschfelds seine Dissertation De Gente Valeria schrieb. Opponenten waren Bogdan Krieger, Walter Henze und Ernst Kornemann. 1893 fuhr er nach Rom, wo Georg Wissowa ihn dafür gewann, biographische Artikel für den Pauly-Wissowa zu verfassen. Von Rom aus reiste er nach Athen weiter, wo er an Ausgrabungen auf der Akropolis teilnahm. Hier traf er Clara Engels, die er zwei Jahre später, am 4. September 1897, heiratete.
+
+Mittlerweile (1896) war Münzer zum unbezahlten Dozenten an der Universität Basel ernannt worden, so dass er und Clara von der Unterstützung ihrer Eltern und seinen biographischen Artikeln leben mussten. 1902 wurde ihm in Basel der zweite Lehrstuhl für klassische Philologie übertragen. 1912 nahm er einen Ruf nach Königsberg an, wodurch er deutscher Beamter wurde.
+
+Clara starb am 15. Dezember 1918 während der Grippe-Pandemie (Spanische Grippe). 1921 nahm Münzer einen Lehrstuhl an der Universität Münster an. Sein wichtigstes Werk, Römische Adelsparteien und Adelsfamilien, war 1920 erschienen und brachte ihm zum ersten Mal in seinem Leben Ruhm ein. 1923 wurde er Dekan, 1924 heiratete er die Witwe Clara Lunke, geborene Ploeger, und wurde dadurch Stiefvater von zwei halbwüchsigen Kindern.
+
+Münzer war generell apolitisch, 1933 aber begann die Politik sich für ihn zu interessieren, als Kommunisten, „Nichtarier“ und Gegner der NSDAP aus dem öffentlichen Dienst entfernt wurden. Beamte aus der Zeit vor 1914 wurden offiziell freigestellt, aber seine Biographen belegen seine fortgesetzte Beschäftigung auf Bitten einflussreicher Kollegen und früherer Studenten hin. Im Januar 1935 verlangte ein neues Gesetz die Entfernung aller Dozenten und Professoren, die älter als 65 Jahre waren (womit Platz für Nazi-Sympathisanten geschaffen werden sollte). Münzer ging am 23. Juli 1935 in Pension.
+
+Seine zweite Frau starb 1935. Am 14. November des gleichen Jahres wurde er offiziell als Jude klassifiziert, woraufhin viele Kollegen und Bekannte sich von ihm distanzierten. Dennoch arbeitete er weiter an den Biographien für den Pauly-Wissowa, und sie wurden dort auch angenommen, entgegen dem Gesetz, das Juden jede publizistische Arbeit verbot. 1938 zwang ihn ein weiteres Gesetz, einen jüdischen Beinamen anzunehmen, so dass er von nun an offiziell als „der Jude Friedrich Israel Münzer“ bezeichnet wurde. In einem Brief an Ronald Syme vom 12. Dezember 1938 schrieb er, dass die geänderte Situation ihn tief deprimiere, dass er seine Lage aber als deutlich besser als die vieler anderer ansehe.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald Regular" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a8H-wR-2Gm" secondAttribute="trailing" constant="20" id="3yU-K3-SEF"/>
+                            <constraint firstItem="j6U-Fz-qs0" firstAttribute="top" secondItem="a8H-wR-2Gm" secondAttribute="bottom" constant="9" id="6SO-DW-Gcb"/>
+                            <constraint firstAttribute="trailing" secondItem="Ngu-bv-Yj3" secondAttribute="trailing" constant="20" id="6gP-4s-X4k"/>
+                            <constraint firstItem="uBP-Vp-y8E" firstAttribute="top" secondItem="vF1-yN-76V" secondAttribute="bottom" constant="7" id="AaE-h3-c0R"/>
+                            <constraint firstItem="Ngu-bv-Yj3" firstAttribute="top" secondItem="usx-wl-azw" secondAttribute="bottom" id="Eob-5w-aFP"/>
+                            <constraint firstItem="AMH-fz-435" firstAttribute="top" secondItem="Ngu-bv-Yj3" secondAttribute="bottom" constant="21" id="Ga7-ZY-Dz9"/>
+                            <constraint firstAttribute="trailing" secondItem="AMH-fz-435" secondAttribute="trailing" constant="20" id="HXJ-Iy-aM2"/>
+                            <constraint firstItem="uBP-Vp-y8E" firstAttribute="leading" secondItem="ljz-Kd-Tbe" secondAttribute="leading" constant="20" id="M6B-0e-EEW"/>
+                            <constraint firstAttribute="trailing" secondItem="vF1-yN-76V" secondAttribute="trailing" constant="20" id="PkJ-O8-MYD"/>
+                            <constraint firstAttribute="trailing" secondItem="uBP-Vp-y8E" secondAttribute="trailing" constant="20" id="RUH-5b-wcv"/>
+                            <constraint firstItem="AMH-fz-435" firstAttribute="leading" secondItem="ljz-Kd-Tbe" secondAttribute="leading" constant="20" id="YQO-R1-frb"/>
+                            <constraint firstItem="vF1-yN-76V" firstAttribute="leading" secondItem="ljz-Kd-Tbe" secondAttribute="leading" constant="20" id="aUG-0A-Zwj"/>
+                            <constraint firstItem="Ngu-bv-Yj3" firstAttribute="leading" secondItem="ljz-Kd-Tbe" secondAttribute="leading" constant="20" id="c77-39-a9m"/>
+                            <constraint firstAttribute="trailing" secondItem="j6U-Fz-qs0" secondAttribute="trailing" constant="20" id="eWc-7T-LGe"/>
+                            <constraint firstItem="a8H-wR-2Gm" firstAttribute="leading" secondItem="ljz-Kd-Tbe" secondAttribute="leading" constant="20" id="lVs-DR-hre"/>
+                            <constraint firstItem="j6U-Fz-qs0" firstAttribute="leading" secondItem="ljz-Kd-Tbe" secondAttribute="leading" constant="20" id="qd5-Go-6hX"/>
+                            <constraint firstItem="a8H-wR-2Gm" firstAttribute="top" secondItem="AMH-fz-435" secondAttribute="bottom" constant="9" id="srb-Ak-Ob2"/>
+                            <constraint firstItem="BpZ-Xw-gXg" firstAttribute="top" secondItem="uBP-Vp-y8E" secondAttribute="bottom" constant="20" id="tBn-bT-rUX"/>
+                            <constraint firstItem="vF1-yN-76V" firstAttribute="top" secondItem="j6U-Fz-qs0" secondAttribute="bottom" constant="9" id="u2o-My-msP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ereignis X" id="ZsU-Mt-tOz"/>
+                    <connections>
+                        <outlet property="eventDescription" destination="uBP-Vp-y8E" id="Tly-wX-add"/>
+                        <outlet property="eventDuration" destination="a8H-wR-2Gm" id="NPG-8R-MBf"/>
+                        <outlet property="eventLocation" destination="j6U-Fz-qs0" id="Sdh-ZX-1Cq"/>
+                        <outlet property="eventShortDescription" destination="Ngu-bv-Yj3" id="eK5-jA-38b"/>
+                        <outlet property="eventStartDate" destination="AMH-fz-435" id="3Af-YC-zZ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5A-K8-q7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="508"/>
+        </scene>
+    </scenes>
+</document>
