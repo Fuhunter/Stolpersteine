@@ -89,6 +89,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 			}
 			
 			// FIXME
+			NSLog(jsonResponse.string!)
 			
 			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 		}

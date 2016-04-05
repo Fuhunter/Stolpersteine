@@ -26,7 +26,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         configureData()
-        print(person.events[0].type)
     }
 
     func configureData(){
@@ -58,7 +57,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.eventLocation.text = event.location.city
             cell.eventDate.text = event.startDate.description
 
-            print(event.type)
+			if event.relPersons != nil {
+				cell.relationsButton.hidden = false
+			} else {
+				cell.relationsButton.hidden = true
+			}
+			
             return cell
         }
     }

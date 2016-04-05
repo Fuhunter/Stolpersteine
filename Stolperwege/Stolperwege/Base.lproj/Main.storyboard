@@ -501,7 +501,7 @@
                                             <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="zEu-qb-fGr" kind="show" id="A3u-6C-2Xh"/>
+                                            <segue destination="zEu-qb-fGr" kind="show" identifier="logout" id="A3u-6C-2Xh"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

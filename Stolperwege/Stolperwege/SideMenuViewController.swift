@@ -20,7 +20,25 @@ class SideMenuViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+	
+	override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+		if identifier == "logout" {
+			Networker.logoutUser({ (success) in
+				
+			})
+			
+			if NSUserDefaults.standardUserDefaults().stringForKey("userURI") == nil {
+				return true
+			} else {
+				let alert = UIAlertController(title: "Fehler beim Ausloggen", message: "Bitte erneut versuchen", preferredStyle: .Alert)
+				alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+				self.parentViewController?.presentViewController(alert, animated: true, completion: nil)
+				return false
+			}
+		}
+		
+		return true
+	}
 }
 
     

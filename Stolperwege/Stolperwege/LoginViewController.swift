@@ -28,10 +28,10 @@ class LoginViewController: UIViewController {
         
         Networker.loginUser(username, password: password, completitonHandler: {sucess in
             switch sucess {
-            case true:
+            case false:
                 
                 self.performSegueWithIdentifier("toMenu", sender: self)
-            case false:
+            case true:
                 let alert = UIAlertController(title: "Falscher Login", message: "Nutzername oder Passwort falsch", preferredStyle: .Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)

@@ -36,14 +36,16 @@ class Event {
     var duration: Int // OWL model is not clear, Int for now
     var description: String
     var location: Location
+	var relPersons: [String]?
     
-    init (type: EventType,startDate: NSDate, duration: Int, description: String, location: Location){
+	init (type: EventType,startDate: NSDate, duration: Int, description: String, location: Location, relPersons: [String]?) {
         
         self.type = type
         self.startDate = startDate
         self.duration = duration
         self.description = description
         self.location = location
+		self.relPersons = relPersons
     }
     
     class func eventImage(eventType: EventType) -> UIImage {

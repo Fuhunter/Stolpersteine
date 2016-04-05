@@ -12,7 +12,7 @@ import CoreLocation
 
 typealias LocationDataStore = (name: String, coordinate: CLLocationCoordinate2D, type: LocationType, street:String?, houseNo: Int?, postCode: Int?, city: String, images:[UIImage]?)
 
-typealias EventDataStore = (type: EventType, startDate: NSDate, duration: Int, description: String, location: Location)
+typealias EventDataStore = (type: EventType, startDate: NSDate, duration: Int, description: String, location: Location, BLA: [String]?)
 
 typealias PersonDataStore = (name : String, title : String?, familyName : String, familyMaidenName : String?, sex : String, birthDate : NSDate, events : [Event], imageName : String, stolperStein:Stolperstein)
 
@@ -34,16 +34,21 @@ class ExampleData {
     }
     
     class var eventsOne: [Event]{
-        let events : [EventDataStore] = [(EventType.Birth, NSDate(), 0, "Geburt", locationsOne[0]),
-                                        (EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[1]),
-                                        (EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[2])]
-        return events.map({Event(type: $0.type, startDate: $0.startDate, duration: $0.duration, description: $0.description, location: $0.location)})
+        let events : [EventDataStore] = [(EventType.Birth, NSDate(), 0, "Geburt", locationsOne[0], []),
+                                        (EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[1], ["Thersia Münzer"]), // FIXME
+                                        (EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[2], [])]
+		return events.map({Event(type: $0.type, startDate: $0.startDate, duration: $0.duration, description: $0.description, location: $0.location, relPersons: $0.BLA)})
     }
-    
-    
+	
+	class var eventsTwo: [Event]{
+		let events : [EventDataStore] = [(EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[1], ["Friedrich Münzer"])] // FIXME
+		return events.map({Event(type: $0.type, startDate: $0.startDate, duration: $0.duration, description: $0.description, location: $0.location, relPersons: $0.BLA)})
+	}
+	
+	
     class var persons: [Person]
     {
-        let dataArray : [PersonDataStore] = [("Friedrich", "Test" , "Münzer", nil, "male", NSDate(), eventsOne, "friedrich.jpg", Stolperstein(coordinate: CLLocationCoordinate2DMake(50.11092209999999, 8.682126700000026), city: "Frankfurt"))]
+        let dataArray : [PersonDataStore] = [("Friedrich", "Test" , "Münzer", nil, "male", NSDate(), eventsOne, "friedrich.jpg", Stolperstein(coordinate: CLLocationCoordinate2DMake(50.11092209999999, 8.682126700000026), city: "Frankfurt")), ("Theresia", "Blubb", "Münzer", nil, "female", NSDate(), eventsTwo, "friedrich.jpg", Stolperstein(coordinate: CLLocationCoordinate2DMake(50.11092209999999, 8.682126700000030), city: "Frankfurt"))]
         
         return dataArray.map({Person(name: $0.name, title: $0.title, familyName: $0.familyName, familyMaidenName: $0.familyMaidenName, sex: $0.sex, birthDate: $0.birthDate, events: $0.events, image: UIImage(named: $0.imageName)!, stolperStein: $0.stolperStein)})
     }

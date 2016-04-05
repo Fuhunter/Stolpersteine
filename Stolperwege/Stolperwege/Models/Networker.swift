@@ -65,9 +65,27 @@ class Networker {
 			}
         }
     }
-    
-    class func logoutUser(){
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("userURI")
+	class func logoutUser(completionHandler: (Bool) -> ()) {
+		Alamofire.request(.POST, logoutURL, parameters: ["target" : "\(NSUserDefaults.standardUserDefaults().stringForKey("userURI"))"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+			
+			guard let value = response.result.value else {
+				NSLog("ERROR")
+				
+				completionHandler(false)
+				return
+			}
+
+			let json = JSON(value)
+			
+			let success = json["success"].boolValue
+			
+			if success {
+				NSUserDefaults.standardUserDefaults().removeObjectForKey("userURI")
+				completionHandler(true)
+			} else {
+				completionHandler(false)
+			}
+		}
     }
     
     class func setUserLocation(coordinate: CLLocationCoordinate2D){
