@@ -386,7 +386,7 @@
                                             <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="lIO-JM-cci" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="zQX-eh-6Av"/>
+                                            <segue destination="lIO-JM-cci" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="1al-hJ-UC1"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="GjS-eh-tQZ" userLabel="Historische Karten">
@@ -880,6 +880,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="HBF-li-Mdn"/>
         <segue reference="A3u-6C-2Xh"/>
-        <segue reference="zQX-eh-6Av"/>
+        <segue reference="1al-hJ-UC1"/>
     </inferredMetricsTieBreakers>
 </document>
