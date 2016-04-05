@@ -55,6 +55,7 @@
 		4DE7746A1CA578FD008EBA09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE774691CA578FD008EBA09 /* RegisterViewController.swift */; };
 		4DE7746C1CA582FC008EBA09 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7746B1CA582FC008EBA09 /* Networker.swift */; };
 		4DE7746E1CA58AB7008EBA09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7746D1CA58AB7008EBA09 /* Extensions.swift */; };
+		A53A9EDB1CB418B400AD65FA /* RelationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A9EDA1CB418B400AD65FA /* RelationsViewController.swift */; };
 		A5553EB61CA6E76300919CBD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5553EB51CA6E76300919CBD /* SwiftyJSON.framework */; };
 		A5553EB81CA6E76700919CBD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5553EB71CA6E76700919CBD /* Alamofire.framework */; };
 		A568540E1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A568540D1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework */; };
@@ -139,6 +140,7 @@
 		4DE7746B1CA582FC008EBA09 /* Networker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		4DE7746D1CA58AB7008EBA09 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7F7A939DCC0C2AD30B22E930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A53A9EDA1CB418B400AD65FA /* RelationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationsViewController.swift; sourceTree = "<group>"; };
 		A5553EB51CA6E76300919CBD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Stolperwege-hkmvcezbegwfysfpkshtwcdqjevb/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		A5553EB71CA6E76700919CBD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Stolperwege-hkmvcezbegwfysfpkshtwcdqjevb/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		A568540D1CA6F274009FAEDC /* IDZSwiftCommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDZSwiftCommonCrypto.framework; path = "../../../Library/Developer/Xcode/DerivedData/Stolperwege-hkmvcezbegwfysfpkshtwcdqjevb/Build/Products/Debug-iphonesimulator/IDZSwiftCommonCrypto.framework"; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		1BE4DC301C7F4B1400385026 /* Persons */ = {
 			isa = PBXGroup;
 			children = (
+				A53A9EDA1CB418B400AD65FA /* RelationsViewController.swift */,
 				1B4E53AA1C80976D00AFE9F5 /* ProfileViewController.swift */,
 				1B4E53AE1C80978C00AFE9F5 /* EventDetailViewController.swift */,
 				1BCC17E01C8F4C8A00547CEC /* EventsMapViewController.swift */,
@@ -617,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2D686C1BFE2A4000929395 /* DesignMethods.swift in Sources */,
+				A53A9EDB1CB418B400AD65FA /* RelationsViewController.swift in Sources */,
 				1B7FFB521BFE1BAE00DE9F99 /* BuildingsViewController.swift in Sources */,
 				1B7FFB561BFE24B500DE9F99 /* Constants.swift in Sources */,
 				1B4E53B11C809EAC00AFE9F5 /* EventsTableViewCell.swift in Sources */,

@@ -34,9 +34,9 @@ class ExampleData {
     }
     
     class var eventsOne: [Event]{
-        let events : [EventDataStore] = [(EventType.Birth, NSDate(), 0, "Geburt", locationsOne[0], []),
+        let events : [EventDataStore] = [(EventType.Birth, NSDate(), 0, "Geburt", locationsOne[0], nil),
                                         (EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[1], ["Thersia Münzer"]), // FIXME
-                                        (EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[2], [])]
+                                        (EventType.Special, NSDate(), 0, "Hochzeit", locationsOne[2], nil)]
 		return events.map({Event(type: $0.type, startDate: $0.startDate, duration: $0.duration, description: $0.description, location: $0.location, relPersons: $0.BLA)})
     }
 	

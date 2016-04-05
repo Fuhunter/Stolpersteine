@@ -59,8 +59,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 			if event.relPersons != nil {
 				cell.relationsButton.hidden = false
+				cell.relationsButton.accessibilityHint = "true"
 			} else {
 				cell.relationsButton.hidden = true
+				cell.relationsButton.accessibilityHint = "false"
 			}
 			
             return cell
@@ -78,6 +80,22 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 		
 		if let controller = segue.destinationViewController as? EventsMapViewController {
 			controller.events = person.events
+		}
+		
+		if segue.identifier == "relationSegue" {
+			let controller = segue.destinationViewController as! RelationsViewController
+			
+			if sender?.accessibilityHint == "true" {
+				var rel = "ERROR"
+				for ev in person.events {
+					if ev.relPersons != nil {
+						rel = ev.relPersons!.first!
+						break
+					}
+				}
+				
+				controller.persons = rel
+			}
 		}
     }
 
