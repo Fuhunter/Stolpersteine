@@ -26,8 +26,8 @@ class LoginViewController: UIViewController {
         let password = passwordInput.text!
         
         
-        Networker.loginUser(username, password: password, completitonHandler: {sucess in
-            switch sucess {
+		Networker.loginUser(username, password: password, completitonHandler: { success in
+            switch success {
             case true: // Change me if API Works...
                 
                 self.performSegueWithIdentifier("toMenu", sender: self)
