@@ -94,7 +94,7 @@ class Networker {
         let latitude = coordinate.latitude
         let longitude = coordinate.longitude
         
-        Alamofire.request(.POST, setUserLocationURL, parameters: ["target": userURI,"lat": "\(latitude)","lon": "\(longitude)"], encoding: ParameterEncoding.URL, headers: nil).responseJSON { response in
+        Alamofire.request(.POST, setUserLocationURL, parameters: ["target": userURI,"lat": "\(latitude)","lon": "\(longitude)"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
             
             print(response.result)
             guard let value = response.result.value else {
