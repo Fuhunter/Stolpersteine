@@ -18,3 +18,4 @@ struct ConstantsSeques {
 
 let testLink: String = "http://vesternesse.hucompute.org:8990/persons"
 let restAPI: String = "http://app.stolperwege.hucompute.org/"
+let dummyURI: String = "http://db.stolperwege.hucompute.org/annotation/Node1457708651193"

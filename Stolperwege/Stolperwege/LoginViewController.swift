@@ -26,13 +26,12 @@ class LoginViewController: UIViewController {
         let password = passwordInput.text!
         
         
-        Networker.loginUser(username, password: password, completitonHandler: {sucess in
-            switch sucess {
-            case false: // Change me if API Works...
-                
-                self.performSegueWithIdentifier("toMenu", sender: self)
+		Networker.loginUser(username, password: password, completitonHandler: { success in
+            switch success {
             case true:
-                let alert = UIAlertController(title: "Falscher Login", message: "Nutzername oder Passwort falsch", preferredStyle: .Alert)
+                self.performSegueWithIdentifier("toMenu", sender: self)
+            case false:
+                let alert = UIAlertController(title: "Loginfehler", message: "Logindaten falsch oder User ist bereits eingeloggt!", preferredStyle: .Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
                 

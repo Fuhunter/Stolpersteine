@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class EventsMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class EventsMapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var eventsMap: MKMapView!
 	
@@ -22,9 +22,6 @@ class EventsMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
 
         // Do any additional setup after loading the view.
 		
-		// SetUp View
-		self.eventsMap.delegate = self
-		
 		// User Location
 		self.locationManager.delegate = self
 		self.locationManager.requestWhenInUseAuthorization()
@@ -32,14 +29,15 @@ class EventsMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
 		if CLLocationManager.locationServicesEnabled() {
 			self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
 			self.locationManager.requestLocation()
+			self.locationManager.startUpdatingLocation()
 		}
 		
 		self.locationManager.distanceFilter = 100.0
 		
 		self.eventsMap.showsUserLocation = true
 		
-		
 		for event in self.events {
+
 			let coordinate = event.location.coordinate
 			let annotation = MKPointAnnotation()
 			annotation.coordinate = coordinate

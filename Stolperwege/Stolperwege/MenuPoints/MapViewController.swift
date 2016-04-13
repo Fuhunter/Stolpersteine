@@ -46,6 +46,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 		if CLLocationManager.locationServicesEnabled() {
 			self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
 			self.locationManager.requestLocation()
+			self.locationManager.startUpdatingLocation()
 		}
 		
 		self.locationManager.distanceFilter = 100.0
@@ -69,7 +70,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 	func getUserLocations() -> Void {
 		let URL = restAPI + "getlocations"
 		
-		Alamofire.request(.GET, URL, parameters: ["target": "dummy"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+		Alamofire.request(.GET, URL, parameters: ["target": dummyURI], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
 			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
 			
 			guard let value = response.result.value else {
@@ -89,7 +90,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 			}
 			
 			// FIXME
-			NSLog(jsonResponse.string!)
+			for user in jsonResponse["result"].arrayValue {
+				let coordinate = CLLocationCoordinate2D(latitude: Double(user["latitude"].stringValue)!, longitude: Double(user["longitude"].stringValue)!)
+				let annotation = MKPointAnnotation()
+				annotation.coordinate = coordinate
+				annotation.title = user["name"].stringValue
+				
+				let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
+				pinAnnotation.pinTintColor = UIColor.purpleColor()
+				
+				self.mapView.addAnnotation(annotation)
+			}
 			
 			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 		}
@@ -98,7 +109,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 	func updateUserLocation(latitude latitude: CLLocationDegrees!, longitude: CLLocationDegrees!) -> Void {
 		let URL = restAPI + "setlocation"
 		
-		Alamofire.request(.POST, URL, parameters: ["target": "dummy", "lat": latitude, "lon": longitude], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+		Alamofire.request(.POST, URL, parameters: ["target": dummyURI, "lat": latitude, "lon": longitude], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
 			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
 			
 			guard let value = response.result.value else {
@@ -121,6 +132,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 			
 			self.presentViewController(alert, animated: true, completion: nil)
 		}
+	}
+	
+	func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+		self.mapView.setCenterCoordinate(userLocation.coordinate, animated: true)
 	}
 	
 	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -29,10 +29,10 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        if CLLocationManager.locationServicesEnabled(){
+        if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            
+            locationManager.startUpdatingLocation()
         }
         
 		
@@ -42,7 +42,23 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
 				return
 			}
 			
-			Networker.setUserLocation(userLocation)
+			Networker.setUserLocation(userLocation) { success in
+				switch success {
+				case true:
+					let alert = UIAlertController(title: "Location successfully updated", message: nil, preferredStyle: .Alert)
+					alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+					
+					self.presentViewController(alert, animated: true, completion: nil)
+					break
+				case false:
+					let alert = UIAlertController(title: "Could not update location", message: nil, preferredStyle: .Alert)
+					alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+					
+					self.presentViewController(alert, animated: true, completion: nil)
+					break
+				}
+			}
+			
 			self.setLocationButton.enabled = true
 		} else {
 			self.locationShareSwitch.setOn(false, animated: true)
@@ -63,8 +79,23 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
 		guard let location = self.userLocation else {
 			return
 		}
-		
-        Networker.setUserLocation(location)
+
+        Networker.setUserLocation(location) { success in
+			switch success {
+				case true:
+					let alert = UIAlertController(title: "Location successfully updated", message: nil, preferredStyle: .Alert)
+					alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+					
+					self.presentViewController(alert, animated: true, completion: nil)
+					break
+				case false:
+					let alert = UIAlertController(title: "Could not update location", message: nil, preferredStyle: .Alert)
+					alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+					
+					self.presentViewController(alert, animated: true, completion: nil)
+					break
+			}
+		}
     }
     
     
