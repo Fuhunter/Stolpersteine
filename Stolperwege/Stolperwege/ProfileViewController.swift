@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         configureData()
     }
 
-    func configureData(){
+    func configureData() {
         personName.text = "\(person.name) \(person.familyName)"
         personDevotmentCity.text = person.stolperStein.city
         personImage.image = person.image
@@ -78,7 +78,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             controller.event = person.events[tableView.indexPathForSelectedRow!.row]
         }
 		
-		if let controller = segue.destinationViewController as? EventsMapViewController {
+		if segue.identifier == "eventMapSegue" {
+			let controller = segue.destinationViewController as! EventsMapViewController
 			controller.events = person.events
 		}
 		

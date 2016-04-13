@@ -28,8 +28,7 @@ class LoginViewController: UIViewController {
         
 		Networker.loginUser(username, password: password, completitonHandler: { success in
             switch success {
-            case true: // Change me if API Works...
-                
+            case true:
                 self.performSegueWithIdentifier("toMenu", sender: self)
             case false:
                 let alert = UIAlertController(title: "Loginfehler", message: "Logindaten falsch oder User ist bereits eingeloggt!", preferredStyle: .Alert)

@@ -46,6 +46,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 		if CLLocationManager.locationServicesEnabled() {
 			self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
 			self.locationManager.requestLocation()
+			self.locationManager.startUpdatingLocation()
 		}
 		
 		self.locationManager.distanceFilter = 100.0
@@ -131,6 +132,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 			
 			self.presentViewController(alert, animated: true, completion: nil)
 		}
+	}
+	
+	func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+		self.mapView.setCenterCoordinate(userLocation.coordinate, animated: true)
 	}
 	
 	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

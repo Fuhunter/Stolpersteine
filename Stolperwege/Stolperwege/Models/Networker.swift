@@ -28,28 +28,34 @@ class Networker {
     
     
     
-    class func registerUser(userName: String, password: String, fullName: String){
+    class func registerUser(userName: String, password: String, fullName: String) {
         
         
         // Registering users not possible due to missing API from teachers
         
         Alamofire.request(.POST, registerURL , parameters: ["username": "\(userName)", "password": "\(password.MD5)","realname": "\(fullName)"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
-            
+			
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+			
             if let JSON = response.result.value {
                 print(JSON)
                 print(response.result)
             }
-            
+			
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
     }
     
     
-    class func loginUser(username: String, password: String, completitonHandler: Bool -> ()){
+    class func loginUser(username: String, password: String, completitonHandler: Bool -> ()) {
         
         
         Alamofire.request(.POST, loginURL, parameters: ["username": "\(username)","password": "\(password.MD5)"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
-            
+			
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+			
             guard let value = response.result.value else {
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 				return
 			}
 			
@@ -57,21 +63,26 @@ class Networker {
 			
 			let onlineStatus = json["http://ontologies.hucompute.org/StolperwegeUser#status"].stringValue
 			
-			if onlineStatus == "online"{
-				completitonHandler(true)
+			if onlineStatus == "online" {
 				NSUserDefaults.standardUserDefaults().setObject(json["uri"].stringValue, forKey: "userURI")
+				completitonHandler(true)
 			} else {
 				completitonHandler(false)
 			}
+			
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
     }
 	class func logoutUser(completionHandler: (Bool) -> ()) {
-		Alamofire.request(.POST, logoutURL, parameters: ["target" : "\(NSUserDefaults.standardUserDefaults().stringForKey("userURI"))"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+		Alamofire.request(.POST, logoutURL, parameters: ["target" : dummyURI], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
+			
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
 			
 			guard let value = response.result.value else {
 				NSLog("ERROR")
 				
 				completionHandler(false)
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 				return
 			}
 
@@ -84,24 +95,36 @@ class Networker {
 				completionHandler(true)
 			} else {
 				completionHandler(false)
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 			}
 		}
     }
     
-    class func setUserLocation(coordinate: CLLocationCoordinate2D){
+	class func setUserLocation(coordinate: CLLocationCoordinate2D, completionHandler: Bool -> ()) {
         
         let userURI = NSUserDefaults.standardUserDefaults().objectForKey("userURI")! as! String
         let latitude = coordinate.latitude
         let longitude = coordinate.longitude
+		
         
         Alamofire.request(.POST, setUserLocationURL, parameters: ["target": userURI,"lat": "\(latitude)","lon": "\(longitude)"], encoding: .URLEncodedInURL, headers: nil).responseJSON { response in
-            
-            print(response.result)
+			
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+			
             guard let value = response.result.value else {
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 				return
 			}
 			
-			print(value)
+			let json = JSON(value)
+			
+			if !json["success"].boolValue {
+				completionHandler(false)
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+			}
+			
+			completionHandler(true)
+			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
     }
     
