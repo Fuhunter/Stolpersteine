@@ -1,0 +1,108 @@
+\documentclass[a4paper, 11pt]{report}
+
+\usepackage[ left=2.5 cm, right=2.5 cm]{geometry}
+\usepackage{csquotes}
+\usepackage[german, ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage[hang]{footmisc}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{acronym}
+
+\begin{document}
+	\noindent
+	\thispagestyle{empty}
+	\Large\textbf{Praktikum DBMS - Stolperwege - iOS-App}\\
+	\large\textbf{Dokumentation} \\ \newline
+	\large \textbf{Team Mitglieder} \\ \newline
+	Niclas G\"unther, s1304384\\
+	Matrikelnummer: 5438994\\
+	Email: niclas.guenther@t-online.de \\ \newline
+	Matthias Kühnel, s4259738\\
+	Matrikelnummer : 4792440 \\
+	Email: s4259738@stud.uni-frankfurt.de \\
+	\newpage
+	
+	\section*{Anforderungen}
+	
+	Im Rahmen des Praktikums soll eine Applikation für iOS-Geräte konzeptioniert und entwickelt werden, mit der es möglich ist, die Stolperwege innerhalb von Frankfurt zu erkunden, auf einer Karte aufzusuchen und mehr Informationen über die Personen zu erfahren, welchen die Steine zu Ehren des Holocaust gewidmet wurden.\\
+	Die zu Beginn festgelegten Anforderungen wurden in der Anforderungsanalyse festgehalten.\\
+	Diese wurden insofern erweitert, dass eine RestAPI zur Verfügung gestellt wurde, mit Hilfe derer man sich einloggen, registrieren und weitere Daten abrufen kann. Da die API bei der Erstellung der App nicht korrekt funktionierte bzw. teilweise nicht zur Verfügung stand, haben wir eigenständig Testdaten in das Programm eingepflegt, welche sich an dem Datenmodell, das uns zur Verfügung gestellt wurde, orientiert. Genaueres dazu wird in unserem UML-Diagramm dargestellt.\\
+	
+	\section*{Verwendete Third-Party-Module}
+	
+	Um die Programmierarbeit zu erleichtern und einen sauberen und übersichtlichen Code zu gewährleisten, wurden drei Packages verwendet.
+	Alle Module sind Open-Source und befinden sich auf der Plattform Github.
+	
+	\subsection*{Alamofire}
+	
+	Alamofire vereinfacht die Anfragen die an die RestAPI gesendet werden und erlaubte uns einen übersichtlicheren Code zu schreiben.
+	
+	\subsection*{SwiftyJSON}
+	
+	SwiftyJSON ermöglicht die JSONResponses der RestAPI vereinfacht aufzurufen, wodurch die Codelänge reduziert wird und übersichtlicher ist.
+	
+	\subsection*{IDZSwiftCommonCrypto}
+	
+	Dieses Modul wird benötigt, um die eingegebenen Passwörter zu einem MD5-Hash umzuwandeln.
+	
+	\section*{Was funktioniert?}
+	
+	In den folgenden Unterpunkten wird konkret auf die einzelnen Menüpunkte eingegangen und erläutert, welche Funktionen umgesetzt wurden.
+	
+	\subsection*{Menü}
+	
+	Für einen besseren Überblick eignet sich ein Slide-Menü, bei welchem es möglich ist, verschiedene Features der App aufzurufen oder ggf. die Einstellungen zu ändern. Die Übersicht ist einfach, die Navigationspunkte wurden klar definiert und dadurch haben wir auf dem Bildschirm mehr Platz für andere relevante Inhalte.
+	
+	\subsubsection*{Menüpunkt 1: Login, Registrierung}
+	
+	Beim starten der App wird man zunächst auf gefordert sich einzuloggen oder neu zu registrieren. Alle Eingaben werden an die RestAPI übermittelt, welche bei korrekter Eingabe der Daten zur eigentlichen App weiterleitet. Treten Fehler auf, so werden diese mittels Alertcontrollers dem User angezeigt.\\
+	Bei korrektem Login folgt eine Weiterleitung zur Personenliste.
+	
+	\subsubsection{Menüpunkt 2: Karten}
+	
+	Die einzelnen Stolpersteine werden auf einer Karte angezeigt werden. Beim Tappen auf den einzelnen Stein ist es möglich, weitere Kurzinformationen über diesen Stolperstein zu erhalten (Name, Datum).\\
+	Weiterhin wird bei jedem Aufruf der Karte zwei Anfragen an die RestAPI gesendet.\\
+	Zum einen wird der aktuelle Standort des Users aktualisert und mit den anderen Nutzern geteilt, sofern der User dies explizit erlaubt. (Beim erstmaligen aufrufen dieser Karte wird der Nutzer gefragt, ob er den Zugriff auf seinen Standort erlauben möchte.)\\
+	Zum anderen wird mittels GET-Request die Standorte anderer Nutzer abgefragt und auf der Karte dargestellt. Mit einem Tap auf den Pin wird noch der Name des Nutzers dargestellt.
+	
+	\subsubsection{Menüpunkt 3:  Personen }
+	
+	Da die RestAPI zu diesem Zeitpunkt noch nicht exisiterte bzw. korrekt funktionierte, wurden hier Beispieldaten eingepflegt.\\
+	In einer suchbaren Liste werden alle Personen, die eine Stolperstein haben, optional auch mit einem Bild, dem User angezeigt. Möchte der User nun mehr erfahren tippt er auf einen Listenpunkt und gelangt nun zur ersten Detailansicht dieser Person.\\
+	Hier werden genauere Informationen über diese Person dargestellt (vollständiger Name, Geburtsdatum, etc.). Weiterhin werden hier alle Events dieser Person in einer klickbaren Liste angezeigt. Diese können eine Hochzeit/Deportation/Studium oder Ähnliches sein. \\
+	Wählt man nun ein Event aus, so gelangt man zur Detailansicht des Events und erhält alle verfügbaren Informationen über dieses Event.\\
+	Weiterhin ist es möglich sich alle Events dieser Person auf einer gesonderten Karte anzeigen zu lassen, indem man auf 'auf Karte anzeigen' tippt.\\
+	Jedes Event bietet optional einen Button, der Querverweise zu anderen Personen anzeigt. Dies ist eine einfache Liste mit allen Personen, die diesem Event zugeordnet sind.
+	
+	\subsubsection{Menüpunkt 4: Historische Karten}
+	
+	Hier wurde nur der Menüpunkt zur Verfügung gestellt, da eine andere Gruppe im Rahmen des Praktikums dies umsetzen sollte.
+	
+	\subsubsection{Menüpunkt 5: 3D-Gebäude}
+	
+	Sofern möglich und unter iOS umsetzbar, werden unter diesem Menüpunkt historische Gebäude angezeigt, welche virtuell abgelaufen werden können. Näheres dazu vom Team welches sich mit \textit{Unity} beschäftigt.
+	
+	\subsubsection{Menüpunkt 6: Timeline}
+	
+	Hier werden die Beispielevents einer Person, mittels einfachen Graphen, dargestellt. Angezeigt wird der Name sowie der Zeitpunkt des Events. Alle Events sind mit einer Linie, ähnlich einer RMV-Fahrplankarte, verbunden.
+	
+	\subsubsection{Menüpunkt 7: Einstellungen}
+	
+	In den Einstellungen kann der User die Berechtigung erteilen seinen Standort mit anderen Nutzern zu teilen. Mittels tap auf den Butten 'updateUserLocation' kann dies auf Korrektheit überprüft werden. Das Ergebnis wird mittels Alertcontroller angezeigt.
+	
+	\subsubsection{Menüpunkt 8: Logout}
+	
+	Mit einem Tap auf Logout wird der User ausgeloggt und es erscheint wieder das Startfenster mit dem Login.
+	
+	\section*{Schlusswort}
+	
+	Alle bisherigen statisch eingetragenen Beispieldaten lassen sich durch Umstellung auf die bereits vorhandenen GET-Requests ersetzen. Dadurch werden die Personen, Stolpersteine etc. von der RestAPI abgerufen und dargestellt. Eventuell müssen hier kleinere Korrekturen vorgenommen werden, um eine korrekte Darstellung zu gewährleisten.\\
+	Mit unserer Umsetzung der App wurden alle besprochenen Anforderungen umgesetzt. Weiterhin wurde auf die Lesbarkeit und Verständlichkeit des Codes geachtet, um nachfolgenden Gruppen einen einfachen Einstieg zu .
+	
+	
+\end{document}
